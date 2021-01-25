@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
         - name: snyk-container-demo
-          image: daniellesnyk/snyk-container-demo
+          image: snyk/snyk-container-demo
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
