@@ -1,0 +1,48 @@
+/*!
+ * Copyright (c) 2014-2020 Bjoern Kimminich.
+ * SPDX-License-Identifier: MIT
+ */
+
+.heading {
+  background: rgba(0, 0, 0, .2);
+  font-size: x-large;
+  justify-content: center;
+  padding: 12px 20px;
+}
+
+.img-thumbnail {
+  height: auto;
+  width: 90px;
+}
+
+mat-cell {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+mat-header-row {
+  min-height: 0px !important;
+}
+
+mat-footer-cell {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mat-footer-cell {
+  font-weight: bold;
+}
+
+.content-align {
+  display: flex;
+  justify-content: center;
+}
+
+#price {
+  margin-top: 30px;
+  width: 100%;
+  font-size: large;
+  text-align: right;
+}
