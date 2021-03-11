@@ -1,0 +1,10 @@
+APScheduler
+Flask
+Flask-Assets
+Jinja2
+cssmin
+google-api-python-client
+lxml
+pyquery
+requests
+soco

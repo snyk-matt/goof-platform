@@ -1,0 +1,1966 @@
+{
+  "vulnerabilities": [
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "alternativeIds": [],
+      "creationTime": "2018-08-20T19:12:29.035000Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 7.5,
+      "description": "## Overview\n[flask](https://pypi.org/project/Flask/) is a lightweight WSGI web application framework.\n\nAffected versions of this package are vulnerable to Improper Input Validation. It did not detect the encoding of incoming JSON data as one of the supported UTF encodings, and allowed arbitrary encodings from the request.\n\n## Remediation\nUpgrade `flask` to version 0.12.3 or higher.\n\n## References\n- [GitHub PR](https://github.com/pallets/flask/pull/2691)\n- [GitHub Release Tag](https://github.com/pallets/flask/releases/tag/0.12.3)\n",
+      "disclosureTime": "2018-04-10T19:12:29.035000Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.12.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-FLASK-42185",
+      "identifiers": {
+        "CVE": [
+          "CVE-2018-1000656"
+        ],
+        "CWE": [
+          "CWE-20"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-06-02T11:58:23.863763Z",
+      "moduleName": "flask",
+      "packageManager": "pip",
+      "packageName": "flask",
+      "patches": [],
+      "publicationTime": "2018-08-21T14:16:13.738000Z",
+      "references": [
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/pallets/flask/pull/2691"
+        },
+        {
+          "title": "GitHub Release",
+          "url": "https://github.com/pallets/flask/releases/tag/0.12.3"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,0.12.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "Improper Input Validation",
+      "from": [
+        "python-goof@0.0.0",
+        "flask@0.12.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "flask",
+      "version": "0.12.2"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "alternativeIds": [],
+      "creationTime": "2019-07-17T15:17:46.764958Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 7.5,
+      "description": "## Overview\n\n[Flask](https://pypi.org/project/Flask/) is a lightweight WSGI web application framework\n\n\nAffected versions of this package are vulnerable to Denial of Service (DoS).\nThe package allows for unsafe encoded JSON data to be decoded.\n\n## Remediation\n\nUpgrade `Flask` to version 1.0 or higher.\n\n\n## References\n\n- [GitHub PR](https://github.com/pallets/flask/pull/2691)\n\n- [Release Notes](https://www.palletsprojects.com/blog/flask-1-0-released/)\n",
+      "disclosureTime": "2019-07-17T14:56:51Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.0"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-FLASK-451637",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-1010083"
+        ],
+        "CWE": [
+          "CWE-20"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-07-17T17:05:27.527509Z",
+      "moduleName": "flask",
+      "packageManager": "pip",
+      "packageName": "flask",
+      "patches": [],
+      "publicationTime": "2019-07-17T14:56:51Z",
+      "references": [
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/pallets/flask/pull/2691"
+        },
+        {
+          "title": "Release Notes",
+          "url": "https://www.palletsprojects.com/blog/flask-1-0-released/"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.0)"
+        ]
+      },
+      "severity": "high",
+      "title": "Denial of Service (DoS)",
+      "from": [
+        "python-goof@0.0.0",
+        "flask@0.12.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "flask",
+      "version": "0.12.2"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L/RL:O",
+      "alternativeIds": [],
+      "creationTime": "2019-04-07T10:24:16.310959Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 6,
+      "description": "## Overview\n\n[jinja2](https://pypi.org/project/Jinja2/) is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment.\n\n\nAffected versions of this package are vulnerable to Sandbox Escape\nvia the `str.format_map`.\n\n## Remediation\n\nUpgrade `jinja2` to version 2.10.1 or higher.\n\n\n## References\n\n- [Release Notes](https://palletsprojects.com/blog/jinja-2-10-1-released)\n",
+      "disclosureTime": "2019-04-07T00:42:43Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.10.1"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-JINJA2-174126",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-10906"
+        ],
+        "CWE": [
+          "CWE-265"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-04-07T13:13:03.054711Z",
+      "moduleName": "jinja2",
+      "packageManager": "pip",
+      "packageName": "Jinja2",
+      "patches": [],
+      "publicationTime": "2019-04-07T00:42:43Z",
+      "references": [
+        {
+          "title": "Release Notes",
+          "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.10.1)"
+        ]
+      },
+      "severity": "medium",
+      "title": "Sandbox Escape",
+      "from": [
+        "python-goof@0.0.0",
+        "flask@0.12.2",
+        "Jinja2@2.9.6"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "Jinja2",
+      "version": "2.9.6"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L/RL:O",
+      "alternativeIds": [],
+      "creationTime": "2019-04-07T10:24:16.310959Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 6,
+      "description": "## Overview\n\n[jinja2](https://pypi.org/project/Jinja2/) is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment.\n\n\nAffected versions of this package are vulnerable to Sandbox Escape\nvia the `str.format_map`.\n\n## Remediation\n\nUpgrade `jinja2` to version 2.10.1 or higher.\n\n\n## References\n\n- [Release Notes](https://palletsprojects.com/blog/jinja-2-10-1-released)\n",
+      "disclosureTime": "2019-04-07T00:42:43Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.10.1"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-JINJA2-174126",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-10906"
+        ],
+        "CWE": [
+          "CWE-265"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-04-07T13:13:03.054711Z",
+      "moduleName": "jinja2",
+      "packageManager": "pip",
+      "packageName": "Jinja2",
+      "patches": [],
+      "publicationTime": "2019-04-07T00:42:43Z",
+      "references": [
+        {
+          "title": "Release Notes",
+          "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.10.1)"
+        ]
+      },
+      "severity": "medium",
+      "title": "Sandbox Escape",
+      "from": [
+        "python-goof@0.0.0",
+        "flask-assets@0.12",
+        "Flask@0.12.2",
+        "Jinja2@2.9.6"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "Jinja2",
+      "version": "2.9.6"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "alternativeIds": [],
+      "creationTime": "2018-10-10T08:41:56.309157Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 9.8,
+      "description": "## Overview\n[Requests](https://pypi.org/project/requests/) is a  _Non-GMO_ HTTP library for Python\r\n\r\nAffected versions of this package are vulnerable to Information Exposure.\r\nUpon receiving a same-hostname https-to-http redirect, it sends the HTTP Authorization header to an http URI. This makes it easier for remote attackers to discover credentials by sniffing the network.\r\n\r\n## Remediation\r\nUpgrade `request` to version 2.20 or higher.\n\n## References\n- [GitHub Commit](https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff)\n- [GitHub Issue](https://github.com/requests/requests/issues/4716)\n- [GitHub PR](https://github.com/requests/requests/pull/4718)\n",
+      "disclosureTime": "2018-10-09T17:16:32Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.20"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-REQUESTS-72435",
+      "identifiers": {
+        "CVE": [
+          "CVE-2018-18074"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2018-11-22T10:10:11.991258Z",
+      "moduleName": "requests",
+      "packageManager": "pip",
+      "packageName": "requests",
+      "patches": [],
+      "publicationTime": "2018-10-10T11:23:44Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/requests/requests/issues/4716"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/requests/requests/pull/4718"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.20)"
+        ]
+      },
+      "severity": "high",
+      "title": "Information Exposure",
+      "from": [
+        "python-goof@0.0.0",
+        "requests@2.17.3"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "requests",
+      "version": "2.17.3"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "alternativeIds": [],
+      "creationTime": "2018-10-10T08:41:56.309157Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 9.8,
+      "description": "## Overview\n[Requests](https://pypi.org/project/requests/) is a  _Non-GMO_ HTTP library for Python\r\n\r\nAffected versions of this package are vulnerable to Information Exposure.\r\nUpon receiving a same-hostname https-to-http redirect, it sends the HTTP Authorization header to an http URI. This makes it easier for remote attackers to discover credentials by sniffing the network.\r\n\r\n## Remediation\r\nUpgrade `request` to version 2.20 or higher.\n\n## References\n- [GitHub Commit](https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff)\n- [GitHub Issue](https://github.com/requests/requests/issues/4716)\n- [GitHub PR](https://github.com/requests/requests/pull/4718)\n",
+      "disclosureTime": "2018-10-09T17:16:32Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "2.20"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-REQUESTS-72435",
+      "identifiers": {
+        "CVE": [
+          "CVE-2018-18074"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2018-11-22T10:10:11.991258Z",
+      "moduleName": "requests",
+      "packageManager": "pip",
+      "packageName": "requests",
+      "patches": [],
+      "publicationTime": "2018-10-10T11:23:44Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/requests/requests/issues/4716"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/requests/requests/pull/4718"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.20)"
+        ]
+      },
+      "severity": "high",
+      "title": "Information Exposure",
+      "from": [
+        "python-goof@0.0.0",
+        "soco@0.12",
+        "requests@2.17.3"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "requests",
+      "version": "2.17.3"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:H/RL:O/RC:C",
+      "alternativeIds": [],
+      "creationTime": "2019-04-16T10:15:54.331131Z",
+      "credit": [
+        "ragdoll"
+      ],
+      "cvssScore": 7.3,
+      "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to CRLF injection.\nAttacker who has the control of the requesting address parameter, could  manipulate an HTTP header and attack an internal service.\r\n\r\n## PoC\r\nby `ragdoll` and `Alvin Chang`\r\n```\r\nimport urllib3\r\n\r\npool_manager = urllib3.PoolManager()\r\n\r\nhost = \"localhost:7777?a=1 HTTP/1.1\\r\\nX-injected: header\\r\\nTEST: 123\"\r\nurl = \"http://\" + host + \":8080/test/?test=a\"\r\n\r\ntry:\r\n    info = pool_manager.request('GET', url).info()\r\n    print(info)\r\nexcept Exception:\r\n    pass\r\n\r\n# nc -l localhost 7777\r\nGET /?a=1 HTTP/1.1\r\nX-injected: header\r\nTEST: 123:8080/test/?test=a HTTP/1.1\r\nHost: localhost:7777\r\nAccept-Encoding: identity\r\n```\r\nThe nc server will display the HTTP request with a manipulated header content: `X-injected:header`, indicating a successful injection of the HTTP header.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532)\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1553)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1487)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1531)\n\n- [Python Bug Report](https://bugs.python.org/issue36276)\n",
+      "disclosureTime": "2019-04-15T16:12:12Z",
+      "exploit": "High",
+      "fixedIn": [
+        "1.24.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-174323",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-11236"
+        ],
+        "CWE": [
+          "CWE-93"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-05-10T15:12:35.837222Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2019-04-18T16:12:12Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/urllib3/urllib3/issues/1553"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1487"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1531"
+        },
+        {
+          "title": "Python Bug Report",
+          "url": "https://bugs.python.org/issue36276"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.24.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "CRLF injection",
+      "from": [
+        "python-goof@0.0.0",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "alternativeIds": [],
+      "creationTime": "2019-04-21T12:54:36.347110Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 7.5,
+      "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Improper Certificate Validation.\nIt mishandles certain cases where the desired set of CA certificates is different from the OS store of CA certificates. This can result in SSL connections succeeding in situations where it should have failed.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.2 or higher.\n\n\n## References\n\n- [GitHub Comparison](https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4)\n",
+      "disclosureTime": "2019-04-18T22:07:15Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.24.2"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-174464",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-11324"
+        ],
+        "CWE": [
+          "CWE-295"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-04-21T13:32:15.582877Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2019-04-18T22:07:15Z",
+      "references": [
+        {
+          "title": "GitHub Comparison",
+          "url": "https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.24.2)"
+        ]
+      },
+      "severity": "high",
+      "title": "Improper Certificate Validation",
+      "from": [
+        "python-goof@0.0.0",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "alternativeIds": [],
+      "creationTime": "2018-12-12T12:41:34.558379Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 5.9,
+      "description": "## Overview\n \n[urllib3](https://pypi.org/project/urllib3/) is a HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Authentication Bypass.\nIt did remove the Authorization HTTP header when following a cross-origin redirect. This can allow for credentials in the Authorization header to be exposed to unintended hosts or transmitted in cleartext.\n\n## Remediation\n\nUpgrade urllib3 to version 1.23 or higher.\n\n\n## References\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1316)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1346)\n\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1649153)\n",
+      "disclosureTime": "2018-12-11T18:20:29Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.23"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-72681",
+      "identifiers": {
+        "CVE": [
+          "CVE-2018-20060"
+        ],
+        "CWE": [
+          "CWE-288"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2018-12-12T17:28:18.277222Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2018-12-12T17:28:18.256660Z",
+      "references": [
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/urllib3/urllib3/issues/1316"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1346"
+        },
+        {
+          "title": "RedHat Bugzilla Bug",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1649153"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.23)"
+        ]
+      },
+      "severity": "medium",
+      "title": "Authentication Bypass",
+      "from": [
+        "python-goof@0.0.0",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:H/RL:O/RC:C",
+      "alternativeIds": [],
+      "creationTime": "2019-04-16T10:15:54.331131Z",
+      "credit": [
+        "ragdoll"
+      ],
+      "cvssScore": 7.3,
+      "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to CRLF injection.\nAttacker who has the control of the requesting address parameter, could  manipulate an HTTP header and attack an internal service.\r\n\r\n## PoC\r\nby `ragdoll` and `Alvin Chang`\r\n```\r\nimport urllib3\r\n\r\npool_manager = urllib3.PoolManager()\r\n\r\nhost = \"localhost:7777?a=1 HTTP/1.1\\r\\nX-injected: header\\r\\nTEST: 123\"\r\nurl = \"http://\" + host + \":8080/test/?test=a\"\r\n\r\ntry:\r\n    info = pool_manager.request('GET', url).info()\r\n    print(info)\r\nexcept Exception:\r\n    pass\r\n\r\n# nc -l localhost 7777\r\nGET /?a=1 HTTP/1.1\r\nX-injected: header\r\nTEST: 123:8080/test/?test=a HTTP/1.1\r\nHost: localhost:7777\r\nAccept-Encoding: identity\r\n```\r\nThe nc server will display the HTTP request with a manipulated header content: `X-injected:header`, indicating a successful injection of the HTTP header.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532)\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1553)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1487)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1531)\n\n- [Python Bug Report](https://bugs.python.org/issue36276)\n",
+      "disclosureTime": "2019-04-15T16:12:12Z",
+      "exploit": "High",
+      "fixedIn": [
+        "1.24.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-174323",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-11236"
+        ],
+        "CWE": [
+          "CWE-93"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-05-10T15:12:35.837222Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2019-04-18T16:12:12Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/urllib3/urllib3/issues/1553"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1487"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1531"
+        },
+        {
+          "title": "Python Bug Report",
+          "url": "https://bugs.python.org/issue36276"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.24.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "CRLF injection",
+      "from": [
+        "python-goof@0.0.0",
+        "requests@2.17.3",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "alternativeIds": [],
+      "creationTime": "2019-04-21T12:54:36.347110Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 7.5,
+      "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Improper Certificate Validation.\nIt mishandles certain cases where the desired set of CA certificates is different from the OS store of CA certificates. This can result in SSL connections succeeding in situations where it should have failed.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.2 or higher.\n\n\n## References\n\n- [GitHub Comparison](https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4)\n",
+      "disclosureTime": "2019-04-18T22:07:15Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.24.2"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-174464",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-11324"
+        ],
+        "CWE": [
+          "CWE-295"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-04-21T13:32:15.582877Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2019-04-18T22:07:15Z",
+      "references": [
+        {
+          "title": "GitHub Comparison",
+          "url": "https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.24.2)"
+        ]
+      },
+      "severity": "high",
+      "title": "Improper Certificate Validation",
+      "from": [
+        "python-goof@0.0.0",
+        "requests@2.17.3",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "alternativeIds": [],
+      "creationTime": "2018-12-12T12:41:34.558379Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 5.9,
+      "description": "## Overview\n \n[urllib3](https://pypi.org/project/urllib3/) is a HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Authentication Bypass.\nIt did remove the Authorization HTTP header when following a cross-origin redirect. This can allow for credentials in the Authorization header to be exposed to unintended hosts or transmitted in cleartext.\n\n## Remediation\n\nUpgrade urllib3 to version 1.23 or higher.\n\n\n## References\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1316)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1346)\n\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1649153)\n",
+      "disclosureTime": "2018-12-11T18:20:29Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.23"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-72681",
+      "identifiers": {
+        "CVE": [
+          "CVE-2018-20060"
+        ],
+        "CWE": [
+          "CWE-288"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2018-12-12T17:28:18.277222Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2018-12-12T17:28:18.256660Z",
+      "references": [
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/urllib3/urllib3/issues/1316"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1346"
+        },
+        {
+          "title": "RedHat Bugzilla Bug",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1649153"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.23)"
+        ]
+      },
+      "severity": "medium",
+      "title": "Authentication Bypass",
+      "from": [
+        "python-goof@0.0.0",
+        "requests@2.17.3",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:H/RL:O/RC:C",
+      "alternativeIds": [],
+      "creationTime": "2019-04-16T10:15:54.331131Z",
+      "credit": [
+        "ragdoll"
+      ],
+      "cvssScore": 7.3,
+      "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to CRLF injection.\nAttacker who has the control of the requesting address parameter, could  manipulate an HTTP header and attack an internal service.\r\n\r\n## PoC\r\nby `ragdoll` and `Alvin Chang`\r\n```\r\nimport urllib3\r\n\r\npool_manager = urllib3.PoolManager()\r\n\r\nhost = \"localhost:7777?a=1 HTTP/1.1\\r\\nX-injected: header\\r\\nTEST: 123\"\r\nurl = \"http://\" + host + \":8080/test/?test=a\"\r\n\r\ntry:\r\n    info = pool_manager.request('GET', url).info()\r\n    print(info)\r\nexcept Exception:\r\n    pass\r\n\r\n# nc -l localhost 7777\r\nGET /?a=1 HTTP/1.1\r\nX-injected: header\r\nTEST: 123:8080/test/?test=a HTTP/1.1\r\nHost: localhost:7777\r\nAccept-Encoding: identity\r\n```\r\nThe nc server will display the HTTP request with a manipulated header content: `X-injected:header`, indicating a successful injection of the HTTP header.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532)\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1553)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1487)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1531)\n\n- [Python Bug Report](https://bugs.python.org/issue36276)\n",
+      "disclosureTime": "2019-04-15T16:12:12Z",
+      "exploit": "High",
+      "fixedIn": [
+        "1.24.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-174323",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-11236"
+        ],
+        "CWE": [
+          "CWE-93"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-05-10T15:12:35.837222Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2019-04-18T16:12:12Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532"
+        },
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/urllib3/urllib3/issues/1553"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1487"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1531"
+        },
+        {
+          "title": "Python Bug Report",
+          "url": "https://bugs.python.org/issue36276"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.24.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "CRLF injection",
+      "from": [
+        "python-goof@0.0.0",
+        "soco@0.12",
+        "requests@2.17.3",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "alternativeIds": [],
+      "creationTime": "2019-04-21T12:54:36.347110Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 7.5,
+      "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Improper Certificate Validation.\nIt mishandles certain cases where the desired set of CA certificates is different from the OS store of CA certificates. This can result in SSL connections succeeding in situations where it should have failed.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.2 or higher.\n\n\n## References\n\n- [GitHub Comparison](https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4)\n",
+      "disclosureTime": "2019-04-18T22:07:15Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.24.2"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-174464",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-11324"
+        ],
+        "CWE": [
+          "CWE-295"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-04-21T13:32:15.582877Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2019-04-18T22:07:15Z",
+      "references": [
+        {
+          "title": "GitHub Comparison",
+          "url": "https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.24.2)"
+        ]
+      },
+      "severity": "high",
+      "title": "Improper Certificate Validation",
+      "from": [
+        "python-goof@0.0.0",
+        "soco@0.12",
+        "requests@2.17.3",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "alternativeIds": [],
+      "creationTime": "2018-12-12T12:41:34.558379Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 5.9,
+      "description": "## Overview\n \n[urllib3](https://pypi.org/project/urllib3/) is a HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Authentication Bypass.\nIt did remove the Authorization HTTP header when following a cross-origin redirect. This can allow for credentials in the Authorization header to be exposed to unintended hosts or transmitted in cleartext.\n\n## Remediation\n\nUpgrade urllib3 to version 1.23 or higher.\n\n\n## References\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1316)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1346)\n\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1649153)\n",
+      "disclosureTime": "2018-12-11T18:20:29Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "1.23"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-URLLIB3-72681",
+      "identifiers": {
+        "CVE": [
+          "CVE-2018-20060"
+        ],
+        "CWE": [
+          "CWE-288"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2018-12-12T17:28:18.277222Z",
+      "moduleName": "urllib3",
+      "packageManager": "pip",
+      "packageName": "urllib3",
+      "patches": [],
+      "publicationTime": "2018-12-12T17:28:18.256660Z",
+      "references": [
+        {
+          "title": "GitHub Issue",
+          "url": "https://github.com/urllib3/urllib3/issues/1316"
+        },
+        {
+          "title": "GitHub PR",
+          "url": "https://github.com/urllib3/urllib3/pull/1346"
+        },
+        {
+          "title": "RedHat Bugzilla Bug",
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1649153"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.23)"
+        ]
+      },
+      "severity": "medium",
+      "title": "Authentication Bypass",
+      "from": [
+        "python-goof@0.0.0",
+        "soco@0.12",
+        "requests@2.17.3",
+        "urllib3@1.21.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "urllib3",
+      "version": "1.21.1"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "alternativeIds": [],
+      "creationTime": "2019-08-10T08:00:09.852965Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 9.1,
+      "description": "## Overview\n\n[Werkzeug](https://werkzeug.palletsprojects.com/) is a WSGI web application library.\n\n\nAffected versions of this package are vulnerable to Insufficient Randomness\nwhen used with Docker, it has insufficient debugger PIN randomness because Docker containers share the same machine id.\n\n## Remediation\n\nUpgrade `Werkzeug` to version 0.15.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246)\n\n- [Release Notes](https://palletsprojects.com/blog/werkzeug-0-15-3-released/)\n\n- [Vulnerable Code](https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py#L168)\n",
+      "disclosureTime": "2019-08-09T16:11:50Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.15.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-WERKZEUG-458931",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-14806"
+        ],
+        "CWE": [
+          "CWE-310"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-08-11T08:49:08.544640Z",
+      "moduleName": "werkzeug",
+      "packageManager": "pip",
+      "packageName": "Werkzeug",
+      "patches": [],
+      "publicationTime": "2019-08-11T07:58:24Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246"
+        },
+        {
+          "title": "Release Notes",
+          "url": "https://palletsprojects.com/blog/werkzeug-0-15-3-released/"
+        },
+        {
+          "title": "Vulnerable Code",
+          "url": "https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py%23L168"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,0.15.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "Insufficient Randomness",
+      "from": [
+        "python-goof@0.0.0",
+        "flask@0.12.2",
+        "Werkzeug@0.12.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "Werkzeug",
+      "version": "0.12.2"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "alternativeIds": [],
+      "creationTime": "2019-08-10T08:00:09.852965Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 9.1,
+      "description": "## Overview\n\n[Werkzeug](https://werkzeug.palletsprojects.com/) is a WSGI web application library.\n\n\nAffected versions of this package are vulnerable to Insufficient Randomness\nwhen used with Docker, it has insufficient debugger PIN randomness because Docker containers share the same machine id.\n\n## Remediation\n\nUpgrade `Werkzeug` to version 0.15.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246)\n\n- [Release Notes](https://palletsprojects.com/blog/werkzeug-0-15-3-released/)\n\n- [Vulnerable Code](https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py#L168)\n",
+      "disclosureTime": "2019-08-09T16:11:50Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.15.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-WERKZEUG-458931",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-14806"
+        ],
+        "CWE": [
+          "CWE-310"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-08-11T08:49:08.544640Z",
+      "moduleName": "werkzeug",
+      "packageManager": "pip",
+      "packageName": "Werkzeug",
+      "patches": [],
+      "publicationTime": "2019-08-11T07:58:24Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246"
+        },
+        {
+          "title": "Release Notes",
+          "url": "https://palletsprojects.com/blog/werkzeug-0-15-3-released/"
+        },
+        {
+          "title": "Vulnerable Code",
+          "url": "https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py%23L168"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,0.15.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "Insufficient Randomness",
+      "from": [
+        "python-goof@0.0.0",
+        "flask-assets@0.12",
+        "Flask@0.12.2",
+        "Werkzeug@0.12.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "Werkzeug",
+      "version": "0.12.2"
+    },
+    {
+      "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "alternativeIds": [],
+      "creationTime": "2019-08-10T08:00:09.852965Z",
+      "credit": [
+        "Unknown"
+      ],
+      "cvssScore": 9.1,
+      "description": "## Overview\n\n[Werkzeug](https://werkzeug.palletsprojects.com/) is a WSGI web application library.\n\n\nAffected versions of this package are vulnerable to Insufficient Randomness\nwhen used with Docker, it has insufficient debugger PIN randomness because Docker containers share the same machine id.\n\n## Remediation\n\nUpgrade `Werkzeug` to version 0.15.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246)\n\n- [Release Notes](https://palletsprojects.com/blog/werkzeug-0-15-3-released/)\n\n- [Vulnerable Code](https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py#L168)\n",
+      "disclosureTime": "2019-08-09T16:11:50Z",
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "0.15.3"
+      ],
+      "functions": [],
+      "functions_new": [],
+      "id": "SNYK-PYTHON-WERKZEUG-458931",
+      "identifiers": {
+        "CVE": [
+          "CVE-2019-14806"
+        ],
+        "CWE": [
+          "CWE-310"
+        ]
+      },
+      "language": "python",
+      "modificationTime": "2019-08-11T08:49:08.544640Z",
+      "moduleName": "werkzeug",
+      "packageManager": "pip",
+      "packageName": "Werkzeug",
+      "patches": [],
+      "publicationTime": "2019-08-11T07:58:24Z",
+      "references": [
+        {
+          "title": "GitHub Commit",
+          "url": "https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246"
+        },
+        {
+          "title": "Release Notes",
+          "url": "https://palletsprojects.com/blog/werkzeug-0-15-3-released/"
+        },
+        {
+          "title": "Vulnerable Code",
+          "url": "https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py%23L168"
+        }
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,0.15.3)"
+        ]
+      },
+      "severity": "high",
+      "title": "Insufficient Randomness",
+      "from": [
+        "python-goof@0.0.0",
+        "werkzeug@0.12.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "werkzeug",
+      "version": "0.12.2"
+    },
+    {
+      "license": "LGPL-2.1",
+      "semver": {
+        "vulnerable": [
+          "[0,)"
+        ]
+      },
+      "id": "snyk:lic:pip:chardet:LGPL-2.1",
+      "type": "license",
+      "packageManager": "pip",
+      "language": "python",
+      "packageName": "chardet",
+      "title": "LGPL-2.1 license",
+      "description": "LGPL-2.1 license",
+      "publicationTime": "2020-03-10T02:13:47.038Z",
+      "creationTime": "2020-03-10T02:13:47.038Z",
+      "patches": [],
+      "licenseTemplateUrl": "https://raw.githubusercontent.com/spdx/license-list/master/LGPL-2.1.txt",
+      "severity": "medium",
+      "legalInstructionsArray": [
+        {
+          "licenseName": "LGPL-2.1",
+          "legalContent": "This is a test instruction"
+        }
+      ],
+      "from": [
+        "python-goof@0.0.0",
+        "chardet@3.0.3"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "chardet",
+      "version": "3.0.3"
+    },
+    {
+      "license": "LGPL-2.1",
+      "semver": {
+        "vulnerable": [
+          "[0,)"
+        ]
+      },
+      "id": "snyk:lic:pip:chardet:LGPL-2.1",
+      "type": "license",
+      "packageManager": "pip",
+      "language": "python",
+      "packageName": "chardet",
+      "title": "LGPL-2.1 license",
+      "description": "LGPL-2.1 license",
+      "publicationTime": "2020-03-10T02:13:47.038Z",
+      "creationTime": "2020-03-10T02:13:47.038Z",
+      "patches": [],
+      "licenseTemplateUrl": "https://raw.githubusercontent.com/spdx/license-list/master/LGPL-2.1.txt",
+      "severity": "medium",
+      "legalInstructionsArray": [
+        {
+          "licenseName": "LGPL-2.1",
+          "legalContent": "This is a test instruction"
+        }
+      ],
+      "from": [
+        "python-goof@0.0.0",
+        "requests@2.17.3",
+        "chardet@3.0.3"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "chardet",
+      "version": "3.0.3"
+    },
+    {
+      "license": "LGPL-2.1",
+      "semver": {
+        "vulnerable": [
+          "[0,)"
+        ]
+      },
+      "id": "snyk:lic:pip:chardet:LGPL-2.1",
+      "type": "license",
+      "packageManager": "pip",
+      "language": "python",
+      "packageName": "chardet",
+      "title": "LGPL-2.1 license",
+      "description": "LGPL-2.1 license",
+      "publicationTime": "2020-03-10T02:13:47.038Z",
+      "creationTime": "2020-03-10T02:13:47.038Z",
+      "patches": [],
+      "licenseTemplateUrl": "https://raw.githubusercontent.com/spdx/license-list/master/LGPL-2.1.txt",
+      "severity": "medium",
+      "legalInstructionsArray": [
+        {
+          "licenseName": "LGPL-2.1",
+          "legalContent": "This is a test instruction"
+        }
+      ],
+      "from": [
+        "python-goof@0.0.0",
+        "soco@0.12",
+        "requests@2.17.3",
+        "chardet@3.0.3"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "chardet",
+      "version": "3.0.3"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 37,
+  "org": "global-demo-corporation",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.14.1\nignore: {}\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {
+      "AGPL-1.0": "high",
+      "AGPL-3.0": "high",
+      "Artistic-1.0": "medium",
+      "Artistic-2.0": "medium",
+      "CDDL-1.0": "medium",
+      "CPOL-1.02": "high",
+      "EPL-1.0": "medium",
+      "GPL-2.0": "medium",
+      "GPL-3.0": "high",
+      "LGPL-2.0": "medium",
+      "LGPL-2.1": "medium",
+      "LGPL-2.1+": "medium",
+      "LGPL-3.0": "medium",
+      "LGPL-3.0+": "medium",
+      "MPL-1.1": "medium",
+      "MPL-2.0": "medium",
+      "MS-RL": "medium",
+      "SimPL-2.0": "high"
+    },
+    "orgLicenseRules": {
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "high",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "medium",
+        "instructions": "This is a new instruction for this license. Example would be - &quot;Raise to legal team&quot;."
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": "*\n\nTest instructions"
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": "This is a test instruction"
+      },
+      "LGPL-2.1+": {
+        "licenseType": "LGPL-2.1+",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0+": {
+        "licenseType": "LGPL-3.0+",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "pip",
+  "ignoreSettings": null,
+  "summary": "21 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "alternativeIds": [],
+        "creationTime": "2018-08-20T19:12:29.035000Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 7.5,
+        "description": "## Overview\n[flask](https://pypi.org/project/Flask/) is a lightweight WSGI web application framework.\n\nAffected versions of this package are vulnerable to Improper Input Validation. It did not detect the encoding of incoming JSON data as one of the supported UTF encodings, and allowed arbitrary encodings from the request.\n\n## Remediation\nUpgrade `flask` to version 0.12.3 or higher.\n\n## References\n- [GitHub PR](https://github.com/pallets/flask/pull/2691)\n- [GitHub Release Tag](https://github.com/pallets/flask/releases/tag/0.12.3)\n",
+        "disclosureTime": "2018-04-10T19:12:29.035000Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "0.12.3"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-FLASK-42185",
+        "identifiers": {
+          "CVE": [
+            "CVE-2018-1000656"
+          ],
+          "CWE": [
+            "CWE-20"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2019-06-02T11:58:23.863763Z",
+        "moduleName": "flask",
+        "packageManager": "pip",
+        "packageName": "flask",
+        "patches": [],
+        "publicationTime": "2018-08-21T14:16:13.738000Z",
+        "references": [
+          {
+            "title": "GitHub PR",
+            "url": "https://github.com/pallets/flask/pull/2691"
+          },
+          {
+            "title": "GitHub Release",
+            "url": "https://github.com/pallets/flask/releases/tag/0.12.3"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,0.12.3)"
+          ]
+        },
+        "severity": "high",
+        "title": "Improper Input Validation",
+        "from": [
+          "python-goof@0.0.0",
+          "flask@0.12.2"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "flask",
+        "version": "0.12.2"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "alternativeIds": [],
+        "creationTime": "2019-07-17T15:17:46.764958Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 7.5,
+        "description": "## Overview\n\n[Flask](https://pypi.org/project/Flask/) is a lightweight WSGI web application framework\n\n\nAffected versions of this package are vulnerable to Denial of Service (DoS).\nThe package allows for unsafe encoded JSON data to be decoded.\n\n## Remediation\n\nUpgrade `Flask` to version 1.0 or higher.\n\n\n## References\n\n- [GitHub PR](https://github.com/pallets/flask/pull/2691)\n\n- [Release Notes](https://www.palletsprojects.com/blog/flask-1-0-released/)\n",
+        "disclosureTime": "2019-07-17T14:56:51Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "1.0"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-FLASK-451637",
+        "identifiers": {
+          "CVE": [
+            "CVE-2019-1010083"
+          ],
+          "CWE": [
+            "CWE-20"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2019-07-17T17:05:27.527509Z",
+        "moduleName": "flask",
+        "packageManager": "pip",
+        "packageName": "flask",
+        "patches": [],
+        "publicationTime": "2019-07-17T14:56:51Z",
+        "references": [
+          {
+            "title": "GitHub PR",
+            "url": "https://github.com/pallets/flask/pull/2691"
+          },
+          {
+            "title": "Release Notes",
+            "url": "https://www.palletsprojects.com/blog/flask-1-0-released/"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,1.0)"
+          ]
+        },
+        "severity": "high",
+        "title": "Denial of Service (DoS)",
+        "from": [
+          "python-goof@0.0.0",
+          "flask@0.12.2"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "flask",
+        "version": "0.12.2"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:L/RL:O",
+        "alternativeIds": [],
+        "creationTime": "2019-04-07T10:24:16.310959Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 6,
+        "description": "## Overview\n\n[jinja2](https://pypi.org/project/Jinja2/) is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment.\n\n\nAffected versions of this package are vulnerable to Sandbox Escape\nvia the `str.format_map`.\n\n## Remediation\n\nUpgrade `jinja2` to version 2.10.1 or higher.\n\n\n## References\n\n- [Release Notes](https://palletsprojects.com/blog/jinja-2-10-1-released)\n",
+        "disclosureTime": "2019-04-07T00:42:43Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "2.10.1"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-JINJA2-174126",
+        "identifiers": {
+          "CVE": [
+            "CVE-2019-10906"
+          ],
+          "CWE": [
+            "CWE-265"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2019-04-07T13:13:03.054711Z",
+        "moduleName": "jinja2",
+        "packageManager": "pip",
+        "packageName": "Jinja2",
+        "patches": [],
+        "publicationTime": "2019-04-07T00:42:43Z",
+        "references": [
+          {
+            "title": "Release Notes",
+            "url": "https://palletsprojects.com/blog/jinja-2-10-1-released"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.10.1)"
+          ]
+        },
+        "severity": "medium",
+        "title": "Sandbox Escape",
+        "from": [
+          "python-goof@0.0.0",
+          "flask-assets@0.12",
+          "Flask@0.12.2",
+          "Jinja2@2.9.6"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "Jinja2",
+        "version": "2.9.6"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "alternativeIds": [],
+        "creationTime": "2018-10-10T08:41:56.309157Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 9.8,
+        "description": "## Overview\n[Requests](https://pypi.org/project/requests/) is a  _Non-GMO_ HTTP library for Python\r\n\r\nAffected versions of this package are vulnerable to Information Exposure.\r\nUpon receiving a same-hostname https-to-http redirect, it sends the HTTP Authorization header to an http URI. This makes it easier for remote attackers to discover credentials by sniffing the network.\r\n\r\n## Remediation\r\nUpgrade `request` to version 2.20 or higher.\n\n## References\n- [GitHub Commit](https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff)\n- [GitHub Issue](https://github.com/requests/requests/issues/4716)\n- [GitHub PR](https://github.com/requests/requests/pull/4718)\n",
+        "disclosureTime": "2018-10-09T17:16:32Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "2.20"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-REQUESTS-72435",
+        "identifiers": {
+          "CVE": [
+            "CVE-2018-18074"
+          ],
+          "CWE": [
+            "CWE-200"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2018-11-22T10:10:11.991258Z",
+        "moduleName": "requests",
+        "packageManager": "pip",
+        "packageName": "requests",
+        "patches": [],
+        "publicationTime": "2018-10-10T11:23:44Z",
+        "references": [
+          {
+            "title": "GitHub Commit",
+            "url": "https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff"
+          },
+          {
+            "title": "GitHub Issue",
+            "url": "https://github.com/requests/requests/issues/4716"
+          },
+          {
+            "title": "GitHub PR",
+            "url": "https://github.com/requests/requests/pull/4718"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,2.20)"
+          ]
+        },
+        "severity": "high",
+        "title": "Information Exposure",
+        "from": [
+          "python-goof@0.0.0",
+          "soco@0.12",
+          "requests@2.17.3"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "requests",
+        "version": "2.17.3"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:H/RL:O/RC:C",
+        "alternativeIds": [],
+        "creationTime": "2019-04-16T10:15:54.331131Z",
+        "credit": [
+          "ragdoll"
+        ],
+        "cvssScore": 7.3,
+        "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to CRLF injection.\nAttacker who has the control of the requesting address parameter, could  manipulate an HTTP header and attack an internal service.\r\n\r\n## PoC\r\nby `ragdoll` and `Alvin Chang`\r\n```\r\nimport urllib3\r\n\r\npool_manager = urllib3.PoolManager()\r\n\r\nhost = \"localhost:7777?a=1 HTTP/1.1\\r\\nX-injected: header\\r\\nTEST: 123\"\r\nurl = \"http://\" + host + \":8080/test/?test=a\"\r\n\r\ntry:\r\n    info = pool_manager.request('GET', url).info()\r\n    print(info)\r\nexcept Exception:\r\n    pass\r\n\r\n# nc -l localhost 7777\r\nGET /?a=1 HTTP/1.1\r\nX-injected: header\r\nTEST: 123:8080/test/?test=a HTTP/1.1\r\nHost: localhost:7777\r\nAccept-Encoding: identity\r\n```\r\nThe nc server will display the HTTP request with a manipulated header content: `X-injected:header`, indicating a successful injection of the HTTP header.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532)\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1553)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1487)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1531)\n\n- [Python Bug Report](https://bugs.python.org/issue36276)\n",
+        "disclosureTime": "2019-04-15T16:12:12Z",
+        "exploit": "High",
+        "fixedIn": [
+          "1.24.3"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-URLLIB3-174323",
+        "identifiers": {
+          "CVE": [
+            "CVE-2019-11236"
+          ],
+          "CWE": [
+            "CWE-93"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2019-05-10T15:12:35.837222Z",
+        "moduleName": "urllib3",
+        "packageManager": "pip",
+        "packageName": "urllib3",
+        "patches": [],
+        "publicationTime": "2019-04-18T16:12:12Z",
+        "references": [
+          {
+            "title": "GitHub Commit",
+            "url": "https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532"
+          },
+          {
+            "title": "GitHub Issue",
+            "url": "https://github.com/urllib3/urllib3/issues/1553"
+          },
+          {
+            "title": "GitHub PR",
+            "url": "https://github.com/urllib3/urllib3/pull/1487"
+          },
+          {
+            "title": "GitHub PR",
+            "url": "https://github.com/urllib3/urllib3/pull/1531"
+          },
+          {
+            "title": "Python Bug Report",
+            "url": "https://bugs.python.org/issue36276"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,1.24.3)"
+          ]
+        },
+        "severity": "high",
+        "title": "CRLF injection",
+        "from": [
+          "python-goof@0.0.0",
+          "soco@0.12",
+          "requests@2.17.3",
+          "urllib3@1.21.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "urllib3",
+        "version": "1.21.1"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "alternativeIds": [],
+        "creationTime": "2019-04-21T12:54:36.347110Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 7.5,
+        "description": "## Overview\n\n[urllib3](https://pypi.org/project/urllib3/) is an HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Improper Certificate Validation.\nIt mishandles certain cases where the desired set of CA certificates is different from the OS store of CA certificates. This can result in SSL connections succeeding in situations where it should have failed.\n\n## Remediation\n\nUpgrade `urllib3` to version 1.24.2 or higher.\n\n\n## References\n\n- [GitHub Comparison](https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4)\n",
+        "disclosureTime": "2019-04-18T22:07:15Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "1.24.2"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-URLLIB3-174464",
+        "identifiers": {
+          "CVE": [
+            "CVE-2019-11324"
+          ],
+          "CWE": [
+            "CWE-295"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2019-04-21T13:32:15.582877Z",
+        "moduleName": "urllib3",
+        "packageManager": "pip",
+        "packageName": "urllib3",
+        "patches": [],
+        "publicationTime": "2019-04-18T22:07:15Z",
+        "references": [
+          {
+            "title": "GitHub Comparison",
+            "url": "https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,1.24.2)"
+          ]
+        },
+        "severity": "high",
+        "title": "Improper Certificate Validation",
+        "from": [
+          "python-goof@0.0.0",
+          "soco@0.12",
+          "requests@2.17.3",
+          "urllib3@1.21.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "urllib3",
+        "version": "1.21.1"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "alternativeIds": [],
+        "creationTime": "2018-12-12T12:41:34.558379Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 5.9,
+        "description": "## Overview\n \n[urllib3](https://pypi.org/project/urllib3/) is a HTTP library with thread-safe connection pooling, file post, and more.\n\n\nAffected versions of this package are vulnerable to Authentication Bypass.\nIt did remove the Authorization HTTP header when following a cross-origin redirect. This can allow for credentials in the Authorization header to be exposed to unintended hosts or transmitted in cleartext.\n\n## Remediation\n\nUpgrade urllib3 to version 1.23 or higher.\n\n\n## References\n\n- [GitHub Issue](https://github.com/urllib3/urllib3/issues/1316)\n\n- [GitHub PR](https://github.com/urllib3/urllib3/pull/1346)\n\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1649153)\n",
+        "disclosureTime": "2018-12-11T18:20:29Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "1.23"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-URLLIB3-72681",
+        "identifiers": {
+          "CVE": [
+            "CVE-2018-20060"
+          ],
+          "CWE": [
+            "CWE-288"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2018-12-12T17:28:18.277222Z",
+        "moduleName": "urllib3",
+        "packageManager": "pip",
+        "packageName": "urllib3",
+        "patches": [],
+        "publicationTime": "2018-12-12T17:28:18.256660Z",
+        "references": [
+          {
+            "title": "GitHub Issue",
+            "url": "https://github.com/urllib3/urllib3/issues/1316"
+          },
+          {
+            "title": "GitHub PR",
+            "url": "https://github.com/urllib3/urllib3/pull/1346"
+          },
+          {
+            "title": "RedHat Bugzilla Bug",
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1649153"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,1.23)"
+          ]
+        },
+        "severity": "medium",
+        "title": "Authentication Bypass",
+        "from": [
+          "python-goof@0.0.0",
+          "soco@0.12",
+          "requests@2.17.3",
+          "urllib3@1.21.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "urllib3",
+        "version": "1.21.1"
+      },
+      {
+        "CVSSv3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "alternativeIds": [],
+        "creationTime": "2019-08-10T08:00:09.852965Z",
+        "credit": [
+          "Unknown"
+        ],
+        "cvssScore": 9.1,
+        "description": "## Overview\n\n[Werkzeug](https://werkzeug.palletsprojects.com/) is a WSGI web application library.\n\n\nAffected versions of this package are vulnerable to Insufficient Randomness\nwhen used with Docker, it has insufficient debugger PIN randomness because Docker containers share the same machine id.\n\n## Remediation\n\nUpgrade `Werkzeug` to version 0.15.3 or higher.\n\n\n## References\n\n- [GitHub Commit](https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246)\n\n- [Release Notes](https://palletsprojects.com/blog/werkzeug-0-15-3-released/)\n\n- [Vulnerable Code](https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py#L168)\n",
+        "disclosureTime": "2019-08-09T16:11:50Z",
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "0.15.3"
+        ],
+        "functions": [],
+        "functions_new": [],
+        "id": "SNYK-PYTHON-WERKZEUG-458931",
+        "identifiers": {
+          "CVE": [
+            "CVE-2019-14806"
+          ],
+          "CWE": [
+            "CWE-310"
+          ]
+        },
+        "language": "python",
+        "modificationTime": "2019-08-11T08:49:08.544640Z",
+        "moduleName": "werkzeug",
+        "packageManager": "pip",
+        "packageName": "Werkzeug",
+        "patches": [],
+        "publicationTime": "2019-08-11T07:58:24Z",
+        "references": [
+          {
+            "title": "GitHub Commit",
+            "url": "https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246"
+          },
+          {
+            "title": "Release Notes",
+            "url": "https://palletsprojects.com/blog/werkzeug-0-15-3-released/"
+          },
+          {
+            "title": "Vulnerable Code",
+            "url": "https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py%23L168"
+          }
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,0.15.3)"
+          ]
+        },
+        "severity": "high",
+        "title": "Insufficient Randomness",
+        "from": [
+          "python-goof@0.0.0",
+          "werkzeug@0.12.2"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "name": "werkzeug",
+        "version": "0.12.2"
+      },
+      {
+        "license": "LGPL-2.1",
+        "semver": {
+          "vulnerable": [
+            "[0,)"
+          ]
+        },
+        "id": "snyk:lic:pip:chardet:LGPL-2.1",
+        "type": "license",
+        "packageManager": "pip",
+        "language": "python",
+        "packageName": "chardet",
+        "title": "LGPL-2.1 license",
+        "description": "LGPL-2.1 license",
+        "publicationTime": "2020-03-10T02:13:47.038Z",
+        "creationTime": "2020-03-10T02:13:47.038Z",
+        "patches": [],
+        "licenseTemplateUrl": "https://raw.githubusercontent.com/spdx/license-list/master/LGPL-2.1.txt",
+        "severity": "medium",
+        "legalInstructionsArray": [
+          {
+            "licenseName": "LGPL-2.1",
+            "legalContent": "This is a test instruction"
+          }
+        ],
+        "from": [
+          "python-goof@0.0.0",
+          "soco@0.12",
+          "requests@2.17.3",
+          "chardet@3.0.3"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": false,
+        "name": "chardet",
+        "version": "3.0.3"
+      }
+    ],
+    "upgrade": {},
+    "patch": {},
+    "ignore": {},
+    "pin": {
+      "flask@0.12.2": {
+        "upgradeTo": "flask@0.12.3",
+        "vulns": [
+          "SNYK-PYTHON-FLASK-42185",
+          "SNYK-PYTHON-FLASK-451637"
+        ],
+        "isTransitive": false
+      },
+      "Jinja2@2.9.6": {
+        "upgradeTo": "Jinja2@2.10.1",
+        "vulns": [
+          "SNYK-PYTHON-JINJA2-174126"
+        ],
+        "isTransitive": true
+      },
+      "requests@2.17.3": {
+        "upgradeTo": "requests@2.20",
+        "vulns": [
+          "SNYK-PYTHON-REQUESTS-72435"
+        ],
+        "isTransitive": false
+      },
+      "urllib3@1.21.1": {
+        "upgradeTo": "urllib3@1.24.3",
+        "vulns": [
+          "SNYK-PYTHON-URLLIB3-174323",
+          "SNYK-PYTHON-URLLIB3-174464",
+          "SNYK-PYTHON-URLLIB3-72681"
+        ],
+        "isTransitive": false
+      },
+      "Werkzeug@0.12.2": {
+        "upgradeTo": "Werkzeug@0.15.3",
+        "vulns": [
+          "SNYK-PYTHON-WERKZEUG-458931"
+        ],
+        "isTransitive": true
+      },
+      "werkzeug@0.12.2": {
+        "upgradeTo": "werkzeug@0.15.3",
+        "vulns": [
+          "SNYK-PYTHON-WERKZEUG-458931"
+        ],
+        "isTransitive": false
+      }
+    }
+  },
+  "filesystemPolicy": false,
+  "filtered": {
+    "ignore": [],
+    "patch": []
+  },
+  "uniqueCount": 9,
+  "projectName": "python-goof",
+  "displayTargetFile": "requirements.txt",
+  "path": "/Users/mattbrown/Desktop/DemoPrograms/Goofs/python-goof"
+}

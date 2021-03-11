@@ -1,0 +1,24 @@
+[data-widget="nsb"] {
+  height: 100%;
+  padding: 5px;
+  background: #6e8243;
+  text-align: center;
+}
+[data-widget="nsb"] h1 {
+  font-size: 45px;
+  margin: 8px;
+}
+[data-widget="nsb"] h2 {
+  font-size: 16px;
+  margin: 12px 0 12px 0;
+}
+[data-widget="nsb"] table {
+  width: 100%;
+}
+[data-widget="nsb"] th {
+  font-size: 14px;
+}
+[data-widget="nsb"] em {
+  font-style: normal;
+  color: white;
+}

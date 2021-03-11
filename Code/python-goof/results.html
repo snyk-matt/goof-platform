@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en-us">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Snyk test report</title>
+  <meta name="description" content="10 known vulnerabilities found in 23 vulnerable dependency paths.">
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/snyk/image/upload/v1468845142/favicon/favicon.png"
+    sizes="194x194">
+  <link rel="shortcut icon" href="https://res.cloudinary.com/snyk/image/upload/v1468845142/favicon/favicon.ico">
+  <style type="text/css">
+  
+    body {
+      -moz-font-feature-settings: "pnum";
+      -webkit-font-feature-settings: "pnum";
+      font-variant-numeric: proportional-nums;
+      display: flex;
+      flex-direction: column;
+      font-feature-settings: "pnum";
+      font-size: 100%;
+      line-height: 1.5;
+      min-height: 100vh;
+      -webkit-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F5F5;
+      font-family: 'Arial', 'Helvetica', Calibri, sans-serif;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 500;
+    }
+  
+    a,
+    a:link,
+    a:visited {
+      border-bottom: 1px solid #4b45a9;
+      text-decoration: none;
+      color: #4b45a9;
+    }
+  
+    a:hover,
+    a:focus,
+    a:active {
+      border-bottom: 2px solid #4b45a9;
+    }
+  
+    hr {
+      border: none;
+      margin: 1em 0;
+      border-top: 1px solid #c5c5c5;
+    }
+  
+    ul {
+      padding: 0 1em;
+      margin: 1em 0;
+    }
+  
+    code {
+      background-color: #EEE;
+      color: #333;
+      padding: 0.25em 0.5em;
+      border-radius: 0.25em;
+    }
+  
+    pre {
+      background-color: #333;
+      font-family: monospace;
+      padding: 0.5em 1em 0.75em;
+      border-radius: 0.25em;
+      font-size: 14px;
+    }
+  
+    pre code {
+      padding: 0;
+      background-color: transparent;
+      color: #fff;
+    }
+  
+    a code {
+      border-radius: .125rem .125rem 0 0;
+      padding-bottom: 0;
+      color: #4b45a9;
+    }
+  
+    a[href^="http://"]:after,
+    a[href^="https://"]:after {
+      background-image: linear-gradient(transparent,transparent),url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20112%20109%22%3E%3Cg%20id%3D%22Page-1%22%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20id%3D%22link-external%22%3E%3Cg%20id%3D%22arrow%22%3E%3Cpath%20id%3D%22Line%22%20stroke%3D%22%234B45A9%22%20stroke-width%3D%2215%22%20d%3D%22M88.5%2021l-43%2042.5%22%20stroke-linecap%3D%22square%22%2F%3E%3Cpath%20id%3D%22Triangle%22%20fill%3D%22%234B45A9%22%20d%3D%22M111.2%200v50L61%200z%22%2F%3E%3C%2Fg%3E%3Cpath%20id%3D%22square%22%20fill%3D%22%234B45A9%22%20d%3D%22M66%2015H0v94h94V44L79%2059v35H15V30h36z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+      background-repeat: no-repeat;
+      background-size: .75rem;
+      content: "";
+      display: inline-block;
+      height: .75rem;
+      margin-left: .25rem;
+      width: .75rem;
+    }
+  
+  
+  /* Layout */
+  
+    [class*=layout-container] {
+      margin: 0 auto;
+      max-width: 71.25em;
+      padding: 1.9em 1.3em;
+      position: relative;
+    }
+    .layout-container--short {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .layout-container--short:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  
+  /* Header */
+  
+    .header {
+      padding-bottom: 1px;
+    }
+  
+    .project__header {
+      background-color: #4C4A73;
+      color: #fff;
+      margin-bottom: -1px;
+      padding-top: 1em;
+      padding-bottom: 0.25em;
+      border-bottom: 2px solid #BBB;
+    }
+  
+    .project__header__title {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      word-break: break-all;
+      margin-bottom: .1em;
+      margin-top: 0;
+      float: left;
+    }
+  
+    .timestamp {
+      float: right;
+      clear: none;
+      margin-bottom: 0;
+    }
+  
+    .meta-counts {
+      clear: both;
+      display: block;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 0 1.5em;
+      color: #fff;
+      clear: both;
+      font-size: 1.1em;
+    }
+  
+    .meta-count {
+      display: block;
+      flex-basis: 100%;
+      margin: 0 1em 1em 0;
+      float: left;
+      padding-right: 1em;
+      border-right: 2px solid #fff;
+    }
+  
+    .meta-count:last-child {
+      border-right: 0;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  
+  /* Card */
+  
+    .card {
+      background-color: #fff;
+      border: 1px solid #c5c5c5;
+      border-radius: .25rem;
+      margin: 0 0 2em 0;
+      position: relative;
+      min-height: 40px;
+      padding: 1.5em;
+    }
+  
+    .card .label {
+      background-color: #767676;
+      border: 2px solid #767676;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 0;
+      border-radius: 0.25rem;
+    }
+  
+    .card .label__text {
+      vertical-align: text-top;
+    }
+  
+    .card .label--high {
+      background-color: #B51B72;
+      border-color: #B51B72;
+    }
+  
+    .card .label--medium {
+      background-color: #E29022;
+      border-color: #E29022;
+    }
+  
+    .card .label--low {
+      background-color: #222049;
+      border-color: #222049;
+    }
+  
+    .card .card.severity--low {
+      border-color: #222049;
+    }
+  
+    .card .card.severity--medium {
+      border-color: #E29022;
+    }
+  
+    .card .card.severity--high {
+      border-color: #B51B72;
+    }
+  
+    .card--vuln {
+      padding-top: 4em;
+      max-width: 48.75em;
+    }
+  
+    .card--vuln .label {
+      left: 0;
+      position: absolute;
+      top: 1.1em;
+      padding-left: 1.9em;
+      padding-right: 1.9em;
+      border-radius: 0 0.25rem 0.25rem 0;
+    }
+  
+    .card--vuln .card__section h2 {
+      font-size: 22px;
+      margin-bottom: 0.5em;
+    }
+  
+    .card--vuln .card__section p {
+      margin: 0 0 0.5em 0;
+    }
+  
+    .card--vuln .card__meta {
+      padding: 0 0 0 1em;
+      margin: 0;
+      font-size: 1.1em;
+    }
+  
+    .card .card__meta__paths {
+      font-size: 0.9em;
+    }
+  
+    .card--vuln .card__title {
+      font-size: 28px;
+      margin-top: 0;
+    }
+  
+    .card--vuln .card__cta p {
+      margin: 0;
+      text-align: right;
+    }
+  
+    .source-panel {
+      clear: both;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.5em 0;
+      width: fit-content;
+      padding: 0.5em;
+    }
+  
+  
+  
+  </style>
+</head>
+
+<body class="section-projects">
+  <main class="layout-stacked">
+
+    <div class="layout-stacked__header header">
+      <header class="project__header">
+        <div class="layout-container--short">
+            <h1 class="project__header__title">Snyk test report</h1>
+
+          <p class="timestamp">March 9th 2020, 4:04:01 pm</p>
+          <div class="source-panel">
+            <span>Scanned the following path:</span>
+            <ul>
+              <li>/Users/mattbrown/Desktop/DemoPrograms/Goofs/python-goof (pip)</li>
+            </ul>
+          </div>
+
+          <div class="meta-counts">
+            <div class="meta-count"><span>10</span> <span>known vulnerabilities</span></div>
+            <div class="meta-count"><span>23 vulnerable dependency paths</span></div>
+            <div class="meta-count"><span>37</span> <span>dependencies</span></div>
+          </div><!-- .meta-counts -->
+        </div><!-- .layout-container--short -->
+      </header><!-- .project__header -->
+    </div><!-- .layout-stacked__header -->
+
+    <div class="layout-stacked__content">
+      <div class="layout-container--short" style="padding-top: 35px;">
+        <div class="cards--vuln filter--patch filter--ignore">
+          <div class="card card--vuln  disclosure--not-new severity--high" >
+              <h2 class="card__title">Improper Input Validation</h2>
+              <div class="card__section">
+          
+                  <div class="label label--high">
+                      <span class="label__text">high severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              flask
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and flask@0.12.2
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          flask@0.12.2
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/Flask/">flask</a> is a lightweight WSGI web application framework.</p>
+          <p>Affected versions of this package are vulnerable to Improper Input Validation. It did not detect the encoding of incoming JSON data as one of the supported UTF encodings, and allowed arbitrary encodings from the request.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>flask</code> to version 0.12.3 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><a href="https://github.com/pallets/flask/pull/2691">GitHub PR</a></li>
+          <li><a href="https://github.com/pallets/flask/releases/tag/0.12.3">GitHub Release Tag</a></li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-FLASK-42185">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--high" >
+              <h2 class="card__title">Denial of Service (DOS)</h2>
+              <div class="card__section">
+          
+                  <div class="label label--high">
+                      <span class="label__text">high severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              flask
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and flask@0.12.2
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          flask@0.12.2
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/Flask/">Flask</a> is a lightweight WSGI web application framework</p>
+          <p>Affected versions of this package are vulnerable to Denial of Service (DOS).
+          The package allows for unsafe encoded JSON data to be decoded.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>Flask</code> to version 1.0 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><p><a href="https://github.com/pallets/flask/pull/2691">GitHub PR</a></p>
+          </li>
+          <li><p><a href="https://www.palletsprojects.com/blog/flask-1-0-released/">Release Notes</a></p>
+          </li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-FLASK-451637">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--medium" >
+              <h2 class="card__title">Sandbox Escape</h2>
+              <div class="card__section">
+          
+                  <div class="label label--medium">
+                      <span class="label__text">medium severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              Jinja2
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+          
+                                      python-goof@0.0.0, flask@0.12.2 and others
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          flask@0.12.2
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          Jinja2@2.9.6
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          flask-assets@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          Flask@0.12.2
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          Jinja2@2.9.6
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/Jinja2/">jinja2</a> is a template engine written in pure Python. It provides a Django inspired non-XML syntax but supports inline expressions and an optional sandboxed environment.</p>
+          <p>Affected versions of this package are vulnerable to Sandbox Escape
+          via the <code>str.format_map</code>.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>jinja2</code> to version 2.10.1 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><a href="https://palletsprojects.com/blog/jinja-2-10-1-released">Release Notes</a></li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-JINJA2-174126">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--medium" >
+              <h2 class="card__title">Cross-site Scripting (XSS)</h2>
+              <div class="card__section">
+          
+                  <div class="label label--medium">
+                      <span class="label__text">medium severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              lxml
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and lxml@3.6.0
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          lxml@3.6.0
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          pyquery@1.2.17
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          lxml@3.6.0
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/lxml/">lxml</a> is a Pythonic, mature binding for the libxml2 and libxslt libraries.</p>
+          <p>Affected versions of this package are vulnerable to Cross-site Scripting (XSS) attacks. Due to an improper escaping, an attacker could perform XSS attack in Internet Explorer.</p>
+          <h2 id="details">Details</h2>
+          <p>A cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.</p>
+          <p>This is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser’s Same Origin Policy.</p>
+          <p>ֿInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.</p>
+          <p>Escaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, <code>&lt;</code> can be coded as  <code>&amp;lt</code>; and <code>&gt;</code> can be coded as <code>&amp;gt</code>; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses <code>&lt;</code> and <code>&gt;</code> as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they’ve been correctly escaped in the application code and in this way the attempted attack is diverted.</p>
+          <p>The most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware. </p>
+          <h3 id="types-of-attacks">Types of attacks</h3>
+          <p>There are a few methods by which XSS can be manipulated:</p>
+          <table>
+          <thead>
+          <tr>
+          <th>Type</th>
+          <th>Origin</th>
+          <th>Description</th>
+          </tr>
+          </thead>
+          <tbody><tr>
+          <td><strong>Stored</strong></td>
+          <td>Server</td>
+          <td>The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.</td>
+          </tr>
+          <tr>
+          <td><strong>Reflected</strong></td>
+          <td>Server</td>
+          <td>The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user’s browser.</td>
+          </tr>
+          <tr>
+          <td><strong>DOM-based</strong></td>
+          <td>Client</td>
+          <td>The attacker forces the user’s browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.</td>
+          </tr>
+          <tr>
+          <td><strong>Mutated</strong></td>
+          <td></td>
+          <td>The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.</td>
+          </tr>
+          </tbody></table>
+          <h3 id="affected-environments">Affected environments</h3>
+          <p>The following environments are susceptible to an XSS attack:</p>
+          <ul>
+          <li>Web servers</li>
+          <li>Application servers</li>
+          <li>Web application environments</li>
+          </ul>
+          <h3 id="how-to-prevent">How to prevent</h3>
+          <p>This section describes the top best practices designed to specifically protect your code: </p>
+          <ul>
+          <li>Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches. </li>
+          <li>Convert special characters such as <code>?</code>, <code>&amp;</code>, <code>/</code>, <code>&lt;</code>, <code>&gt;</code> and spaces to their respective HTML or URL encoded equivalents. </li>
+          <li>Give users the option to disable client-side scripts.</li>
+          <li>Redirect invalid requests.</li>
+          <li>Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.</li>
+          <li>Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.</li>
+          <li>Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.</li>
+          </ul>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>lxml</code> to version 4.2.5 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><a href="https://github.com/lxml/lxml/commit/6be1d081b49c97cfd7b3fbd934a193b668629109">GitHub Commit</a></li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-LXML-72651">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--high" >
+              <h2 class="card__title">Information Exposure</h2>
+              <div class="card__section">
+          
+                  <div class="label label--high">
+                      <span class="label__text">high severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              requests
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and requests@2.17.3
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          soco@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/requests/">Requests</a> is a  <em>Non-GMO</em> HTTP library for Python</p>
+          <p>Affected versions of this package are vulnerable to Information Exposure.
+          Upon receiving a same-hostname https-to-http redirect, it sends the HTTP Authorization header to an http URI. This makes it easier for remote attackers to discover credentials by sniffing the network.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>request</code> to version 2.20 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><a href="https://github.com/requests/requests/commit/c45d7c49ea75133e52ab22a8e9e13173938e36ff">GitHub Commit</a></li>
+          <li><a href="https://github.com/requests/requests/issues/4716">GitHub Issue</a></li>
+          <li><a href="https://github.com/requests/requests/pull/4718">GitHub PR</a></li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-REQUESTS-72435">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--high" >
+              <h2 class="card__title">CRLF injection</h2>
+              <div class="card__section">
+          
+                  <div class="label label--high">
+                      <span class="label__text">high severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              urllib3
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and urllib3@1.21.1
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          soco@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/urllib3/">urllib3</a> is an HTTP library with thread-safe connection pooling, file post, and more.</p>
+          <p>Affected versions of this package are vulnerable to CRLF injection.
+          Attacker who has the control of the requesting address parameter, could  manipulate an HTTP header and attack an internal service.</p>
+          <h2 id="poc">PoC</h2>
+          <p>by <code>ragdoll</code> and <code>Alvin Chang</code></p>
+          <pre><code>import urllib3
+          
+          pool_manager = urllib3.PoolManager()
+          
+          host = &quot;localhost:7777?a=1 HTTP/1.1\r\nX-injected: header\r\nTEST: 123&quot;
+          url = &quot;http://&quot; + host + &quot;:8080/test/?test=a&quot;
+          
+          try:
+              info = pool_manager.request(&#39;GET&#39;, url).info()
+              print(info)
+          except Exception:
+              pass
+          
+          # nc -l localhost 7777
+          GET /?a=1 HTTP/1.1
+          X-injected: header
+          TEST: 123:8080/test/?test=a HTTP/1.1
+          Host: localhost:7777
+          Accept-Encoding: identity</code></pre><p>The nc server will display the HTTP request with a manipulated header content: <code>X-injected:header</code>, indicating a successful injection of the HTTP header.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>urllib3</code> to version 1.24.3 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><p><a href="https://github.com/urllib3/urllib3/commit/5d523706c7b03f947dc50a7e783758a2bfff0532">GitHub Commit</a></p>
+          </li>
+          <li><p><a href="https://github.com/urllib3/urllib3/issues/1553">GitHub Issue</a></p>
+          </li>
+          <li><p><a href="https://github.com/urllib3/urllib3/pull/1487">GitHub PR</a></p>
+          </li>
+          <li><p><a href="https://github.com/urllib3/urllib3/pull/1531">GitHub PR</a></p>
+          </li>
+          <li><p><a href="https://bugs.python.org/issue36276">Python Bug Report</a></p>
+          </li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-URLLIB3-174323">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--high" >
+              <h2 class="card__title">Improper Certificate Validation</h2>
+              <div class="card__section">
+          
+                  <div class="label label--high">
+                      <span class="label__text">high severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              urllib3
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and urllib3@1.21.1
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          soco@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/urllib3/">urllib3</a> is an HTTP library with thread-safe connection pooling, file post, and more.</p>
+          <p>Affected versions of this package are vulnerable to Improper Certificate Validation.
+          It mishandles certain cases where the desired set of CA certificates is different from the OS store of CA certificates. This can result in SSL connections succeeding in situations where it should have failed.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>urllib3</code> to version 1.24.2 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><a href="https://github.com/urllib3/urllib3/compare/a6ec68a...1efadf4">GitHub Comparison</a></li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-URLLIB3-174464">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--medium" >
+              <h2 class="card__title">Authentication Bypass</h2>
+              <div class="card__section">
+          
+                  <div class="label label--medium">
+                      <span class="label__text">medium severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              urllib3
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and urllib3@1.21.1
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          soco@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          urllib3@1.21.1
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://pypi.org/project/urllib3/">urllib3</a> is a HTTP library with thread-safe connection pooling, file post, and more.</p>
+          <p>Affected versions of this package are vulnerable to Authentication Bypass.
+          It did remove the Authorization HTTP header when following a cross-origin redirect. This can allow for credentials in the Authorization header to be exposed to unintended hosts or transmitted in cleartext.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade urllib3 to version 1.23 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><p><a href="https://github.com/urllib3/urllib3/issues/1316">GitHub Issue</a></p>
+          </li>
+          <li><p><a href="https://github.com/urllib3/urllib3/pull/1346">GitHub PR</a></p>
+          </li>
+          <li><p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1649153">RedHat Bugzilla Bug</a></p>
+          </li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-URLLIB3-72681">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--high" >
+              <h2 class="card__title">Insufficient Randomness</h2>
+              <div class="card__section">
+          
+                  <div class="label label--high">
+                      <span class="label__text">high severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Vulnerable module:
+          
+                              Werkzeug
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+          
+                                      python-goof@0.0.0, flask@0.12.2 and others
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          flask@0.12.2
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          Werkzeug@0.12.2
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          flask-assets@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          Flask@0.12.2
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          Werkzeug@0.12.2
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          werkzeug@0.12.2
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <h2 id="overview">Overview</h2>
+          <p><a href="https://werkzeug.palletsprojects.com/">Werkzeug</a> is a WSGI web application library.</p>
+          <p>Affected versions of this package are vulnerable to Insufficient Randomness
+          when used with Docker, it has insufficient debugger PIN randomness because Docker containers share the same machine id.</p>
+          <h2 id="remediation">Remediation</h2>
+          <p>Upgrade <code>Werkzeug</code> to version 0.15.3 or higher.</p>
+          <h2 id="references">References</h2>
+          <ul>
+          <li><p><a href="https://github.com/pallets/werkzeug/commit/00bc43b1672e662e5e3b8cecd79e67fc968fa246">GitHub Commit</a></p>
+          </li>
+          <li><p><a href="https://palletsprojects.com/blog/werkzeug-0-15-3-released/">Release Notes</a></p>
+          </li>
+          <li><p><a href="https://github.com/pallets/werkzeug/blob/7fef41b120327d3912fbe12fb64f1951496fcf3e/src/werkzeug/debug/__init__.py#L168">Vulnerable Code</a></p>
+          </li>
+          </ul>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/SNYK-PYTHON-WERKZEUG-458931">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+          <div class="card card--vuln  disclosure--not-new severity--medium" >
+              <h2 class="card__title">LGPL-2.1 license</h2>
+              <div class="card__section">
+          
+                  <div class="label label--medium">
+                      <span class="label__text">medium severity</span>
+                  </div>
+          
+                  <hr/>
+          
+                  <ul class="card__meta">
+                      <li class="card__meta__item">
+                          Package Manager: pip
+                      </li>
+                      <li class="card__meta__item">
+                              Module:
+          
+                              chardet
+                      </li>
+          
+                      <li class="card__meta__item">Introduced through:
+          
+                                  python-goof@0.0.0 and chardet@3.0.3
+          
+                      </li>
+                  </ul>
+          
+                  <hr/>
+          
+          
+                          <h3 class="card__section__title">Detailed paths</h3>
+          
+                      <ul class="card__meta__paths">
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          chardet@3.0.3
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          chardet@3.0.3
+                                          
+                                  </span>
+          
+                              </li>
+                                  <li>
+                                  <span class="list-paths__item__introduced"><em>Introduced through</em>:
+                                          python-goof@0.0.0
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          soco@0.12
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          requests@2.17.3
+                                           <span class="list-paths__item__arrow">›</span> 
+                                          chardet@3.0.3
+                                          
+                                  </span>
+          
+                              </li>
+                      </ul><!-- .list-paths -->
+          
+              </div><!-- .card__section -->
+          
+                <hr/>
+                <!-- Overview -->
+                <p>LGPL-2.1 license</p>
+          
+                <hr/>
+          
+              <div class="cta card__cta">
+                  <p><a href="https://snyk.io/vuln/snyk:lic:pip:chardet:LGPL-2.1">More about this vulnerability</a></p>
+              </div>
+          
+          </div><!-- .card -->
+        </div><!-- cards -->
+      </div>
+    </div><!-- .layout-container -->
+
+  </main><!-- .layout-stacked__content -->
+</body>
+
+</html>

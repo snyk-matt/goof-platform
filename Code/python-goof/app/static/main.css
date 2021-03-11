@@ -1,0 +1,32 @@
+body {
+  background-color: #191818;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    width: 1240px;
+}
+
+.fade {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.updated-at {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 12px !important;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+}
+
+[data-widget] {
+    height: 300px !important;
+    width: 100%;
+}
+
+[class*="col-"] {
+    padding: 5px;
+}

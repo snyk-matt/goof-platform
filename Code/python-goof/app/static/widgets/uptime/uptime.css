@@ -1,0 +1,22 @@
+[data-widget="uptime"] {
+  height: 100%;
+  padding: 5px;
+  background: #B95835;
+  text-align: center;
+}
+[data-widget="uptime"] p {
+  font-size: 18px;
+}
+[data-widget="uptime"] table {
+  margin: 0 10px 0 10px;
+}
+[data-widget="uptime"] .label {
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+}
+[data-widget="uptime"] .active {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 20px;
+}
