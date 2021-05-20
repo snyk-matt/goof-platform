@@ -1,0 +1,20 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - tap > tap-mocha-reporter > debug:
+        patched: '2021-05-20T19:47:06.228Z'
+    - karma > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2021-05-20T19:47:06.228Z'
+    - karma > chokidar > readdirp > micromatch > snapdragon > debug:
+        patched: '2021-05-20T19:47:06.228Z'
+    - karma > chokidar > readdirp > micromatch > braces > snapdragon > debug:
+        patched: '2021-05-20T19:47:06.228Z'
+    - karma > chokidar > readdirp > micromatch > extglob > snapdragon > debug:
+        patched: '2021-05-20T19:47:06.228Z'
+    - karma > chokidar > readdirp > micromatch > nanomatch > snapdragon > debug:
+        patched: '2021-05-20T19:47:06.228Z'
+    - karma > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2021-05-20T19:47:06.228Z'
