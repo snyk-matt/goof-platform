@@ -26,6 +26,6 @@ six==1.10.0
 soco==0.12
 tzlocal==1.4
 uritemplate==3.0.0
-urllib3==1.21.1
+urllib3==1.26.5
 webassets==0.12.1
 xmltodict==0.11.0
