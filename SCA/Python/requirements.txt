@@ -1,8 +1,8 @@
 APScheduler==3.3.1
-Flask==0.12.2
+Flask==0.12.3
 Flask-Assets==0.12
-Jinja2==2.9.6
-Werkzeug==0.12.2
+Jinja2==2.11.3
+Werkzeug==0.15.3
 certifi==2017.4.17
 chardet==3.0.3
 click==6.7
