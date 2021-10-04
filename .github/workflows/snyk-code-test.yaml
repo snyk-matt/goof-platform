@@ -1,14 +1,13 @@
 name: "Snyk Code Scan"
 
-on:
-  push:
-    branches:
+on: push
+branches:
     - master
 
 jobs:
   Pipeline-Job:
     # Configure Environment
-    name: 'Snyk Code Scan'
+   # name: 'Snyk Code Scan'
     runs-on: ubuntu-latest
     env: 
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
