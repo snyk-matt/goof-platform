@@ -31,6 +31,9 @@ jobs:
           SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
         with:
           args: --sarif-file-output=snyk.sarif
+      - name: Run Snyk Code
+      - run: 
+         snyk code test --sarif  > results.sarif
         continue-on-error: true
       # Upload Results
       - name: Upload result to GitHub Code Scanning
@@ -38,10 +41,10 @@ jobs:
         with:
             sarif_file: snyk.sarif
       # Run Snyk Monitor
-      - name: Run Snyk monitor to be updated on new vulns
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
-        with:
-          command: monitor
-          args: --org=main
+   #   - name: Run Snyk monitor to be updated on new vulns
+   #     uses: snyk/actions/node@master
+   #     env:
+   #       SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
+   #     with:
+   #       command: monitor
+   #       args: --org=main
