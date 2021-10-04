@@ -7,6 +7,7 @@ jobs:
     steps:
      # Install and Authenticate to Snyk
     - name: Install Snyk & Authenticate
+    - uses: actions/checkout@v1 
     - run:
          sudo npm install -g snyk
          snyk auth ${SNYK_TOKEN}
