@@ -3,17 +3,23 @@ on: push
 jobs:
   security:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@master
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        continue-on-error: true # To make sure that SARIF upload gets called
-        env:
+     # Install and Authenticate to Snyk
+    - name: Install Snyk & Authenticate
+    - run:
+         sudo npm install -g snyk
+         snyk auth ${SNYK_TOKEN}
+    - uses: actions/checkout@master
+    - name: Run Snyk to check for vulnerabilities
+    - uses: snyk/actions/node@master
+      continue-on-error: true # To make sure that SARIF upload gets called
+      env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
+      with:
    #       args: --sarif-file-output=snyk.sarif
             args: --sarif > snyk.sarif
-      - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v1
-        with:
+    - name: Upload result to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v1
+      with:
           sarif_file: snyk.sarif
