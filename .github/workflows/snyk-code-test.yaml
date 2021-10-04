@@ -8,7 +8,7 @@ jobs:
    # name: 'Snyk Code Scan'
     runs-on: ubuntu-latest
     env: 
-      SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
        
     steps:
     # Checkout Code
@@ -21,8 +21,7 @@ jobs:
     # Run Snyk Code
     - name: Run Snyk Code
       run: 
-         snyk auth  
-         snyk code test --sarif  > results.sarif
+          snyk code test --sarif  > results.sarif
      # continue-on-error: true
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
