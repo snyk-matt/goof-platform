@@ -11,7 +11,7 @@ jobs:
     name: 'Snyk Code Scan'
     runs-on: ubuntu-latest
     env: 
-      SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
        
     steps:
     # Checkout Code
@@ -19,13 +19,13 @@ jobs:
       uses: actions/checkout@v1
 
     # Install and Authenticate to Snyk
-   # - name: Install Snyk & Authenticate
-   #   run: |
-   #      sudo npm install -g snyk
-   #      snyk auth ${55688101-5608-44c8-9e3e-151276017fe9}
+    - name: Install Snyk & Authenticate
+      run: 
+         sudo npm install -g snyk
+         snyk auth ${secrets.SNYK_TOKEN}
     # Run Snyk Code
     - name: Run Snyk Code
-      run: |
+      run: 
          snyk code test --sarif  > results.sarif
      # continue-on-error: true
     - name: Upload SARIF file
