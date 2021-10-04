@@ -19,10 +19,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-         # Install and Authenticate to Snyk
+      # Install and Authenticate to Snyk
       - name: Install Snyk & Authenticate 
+      - run:
          sudo npm install -g snyk
-         snyk auth ${SNYK_TOKEN}
+         snyk auth ${55688101-5608-44c8-9e3e-151276017fe9}
       # Run Snyk Test
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
