@@ -1,50 +1,35 @@
-name: Node.js CI
+name: "Snyk Code Scan"
+
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+    - master
+
 jobs:
-  build:
+  Pipeline-Job:
+    # Configure Environment
+    name: 'Snyk Code Scan'
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14]
+    env: 
+      SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
+       
     steps:
-      # Checkout Code
-      - uses: actions/checkout@v2
-      # Set up Environment
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      # Install and Authenticate to Snyk
-   #   - name: Install Snyk & Authenticate 
-   #   - run:
-   #      sudo npm install -g snyk
-   #   snyk auth ${55688101-5608-44c8-9e3e-151276017fe9}
-      # Run Snyk Test
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
-        with:
-          args: --sarif-file-output=snyk.sarif
-      - name: Run Snyk Code
-      - run: 
+    # Checkout Code
+    - name: Checkout Code
+      uses: actions/checkout@v1
+
+    # Install and Authenticate to Snyk
+    - name: Install Snyk & Authenticate
+      run: |
+         sudo npm install -g snyk
+         snyk auth ${55688101-5608-44c8-9e3e-151276017fe9}
+    # Run Snyk Code
+    - name: Run Snyk Code
+      run: |
          snyk code test --sarif  > results.sarif
-        continue-on-error: true
-      # Upload Results
-      - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-            sarif_file: snyk.sarif
-      # Run Snyk Monitor
-   #   - name: Run Snyk monitor to be updated on new vulns
-   #     uses: snyk/actions/node@master
-   #     env:
-   #       SNYK_TOKEN: ${{ 55688101-5608-44c8-9e3e-151276017fe9 }}
-   #     with:
-   #       command: monitor
-   #       args: --org=main
+      continue-on-error: true
+    - name: Upload SARIF file
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: results.sarif
