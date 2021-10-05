@@ -14,16 +14,16 @@ jobs:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
        
     steps:
-    # Checkout Code
+    # Checkout Code #1
     - name: Checkout Code
       uses: actions/checkout@v1
 
-    # Install and Authenticate to Snyk
+    # Install and Authenticate to Snyk #2
     - name: Install Snyk & Authenticate
       run: |
          sudo npm install -g snyk
          snyk auth ${SNYK_TOKEN}
-    # Run Snyk Code
+    # Run Snyk Code #3
     - name: Run Snyk Code
       run: |
          snyk code test --sarif  > results1.sarif
@@ -31,5 +31,5 @@ jobs:
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
       with:
-        # Path to SARIF file relative to the root of the repository
+        # Path to SARIF file relative to the root of the repository #4
         sarif_file: results1.sarif
