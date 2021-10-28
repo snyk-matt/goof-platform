@@ -7,6 +7,7 @@ WORKDIR /usr/src/goof
 
 # Install image preview generator tools
 RUN apt-get install -y imagemagick
+RUN apt-get install -y curl
 
 RUN npm update
 RUN npm install
