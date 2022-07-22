@@ -27,7 +27,7 @@
     "exiftool-vendored.pl": "12.19.0",
     "express": "4.12.4",
     "express-fileupload": "0.0.5",
-    "file-type": "^8.1.0",
+    "file-type": "^16.5.4",
     "humanize-ms": "1.0.1",
     "jquery": "^2.2.4",
     "karma": "1.7.1",
