@@ -24,7 +24,7 @@ from random import randint
 
 app = Flask(__name__)
 app.logger.setLevel(logging.INFO)
-app.config.from_envvar('JARVIS_SETTINGS')
+app.config.from_envvar('JARVIS_SETTINGS') #config envvar
 app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blocks = True
 sched = BackgroundScheduler(logger=app.logger)
