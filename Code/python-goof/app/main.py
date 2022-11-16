@@ -58,7 +58,7 @@ def _configure_bundles():
         assets.register('css_min_all', Bundle(*css, filters='cssmin',
                                               output='gen/styles.min.css'))
 
-
+#adding comments
 @app.route('/w/<job_id>')
 @app.route('/widget/<job_id>')
 def widget(job_id):
