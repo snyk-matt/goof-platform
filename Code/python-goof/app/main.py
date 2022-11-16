@@ -46,7 +46,7 @@ def _configure_bundles():
             if asset_file.endswith('.js'):
                 js.append(asset_path)
             elif asset_file.endswith('.css'):
-                css.append(asset_path)
+                css.append(asset_path) #adding a css loop
 
     assets = Environment(app)
     if app.debug:
