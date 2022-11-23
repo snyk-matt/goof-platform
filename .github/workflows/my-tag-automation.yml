@@ -1,0 +1,20 @@
+name: "Create a tag"
+ 
+on:
+  release:
+    types: [published]
+    
+jobs:
+  run-updater:
+    runs-on: ubuntu-latest
+    steps:
+    - name: create a tag
+      run: |
+        curl --location --request POST 'https://webapi.coralogix.us/api/v1/external/tags/' \
+        --header 'Authorization: Bearer ff8293bd-d224-45e6-9700-906fff09f2de' \
+        --header 'Content-Type: application/json' \
+        --data-raw '{ 
+        "name": "'"${GITHUB_REF##*/}"'",
+        "application": ["Goof-Platform"],
+        "subsystem": ["subsystem"]
+        }'
