@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: create a tag
       run: |
-        curl --location --request POST 'https://webapi.coralogix.us/api/v1/tags/' \
+        curl --location --request POST 'https://webapi.coralogix.us/api/v1/external/tags/' \
         --header 'Authorization: Bearer bfba48f6-f98d-0e9c-c7df-f8f65cadbb9a' \
         --header 'Content-Type: application/json' \
         --data-raw '{ 
