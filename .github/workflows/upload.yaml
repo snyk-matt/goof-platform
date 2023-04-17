@@ -1,0 +1,39 @@
+on:
+  push:
+    paths:
+      - '*.sarif' # match '*.txt' files (created or updated)
+    branches: [ main ] # match specific branch
+
+jobs:
+  prepare-files:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix-added: ${{ steps.file-changes.outputs.files_added }}
+      matrix-modified: ${{ steps.file-changes.outputs.files_modified }}
+    steps:
+      - id: file-changes
+        uses: trilom/file-changes-action@v1.2.4
+
+  post-files-added:
+    needs: prepare-files
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        file: ${{ fromJSON(needs.prepare-files.outputs.matrix-added) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Echo file
+        run: |
+          echo ${{ results.sarif }} # to test if the correct file was passed
+
+      - name: Make an API call
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://postman-echo.com/post'
+          method: 'POST'
+          file: "${{ github.workspace }}/${{ matrix.file }}"
+
+    # post-files-modified:
+    # ...
