@@ -1,11 +1,11 @@
-name: "Snyk Code Scan"
+name: "Snyk Scan"
 
 on: push
 
 jobs:
   Pipeline-Job:
     # Configure Environment @2
-    name: 'Snyk Code Scan'
+    name: 'Snyk Scan'
     runs-on: ubuntu-latest
     env: 
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
@@ -22,6 +22,10 @@ jobs:
          snyk auth ${SNYK_TOKEN}
     # Run Snyk Code #3
     - name: Run Snyk Code
+      run: |
+        snyk code test --sarif > results.sarif
+      continue-on-error: true
+    - name: Run Snyk OS Code
       run: |
         snyk test --sarif > results.sarif
       continue-on-error: true
