@@ -14,7 +14,7 @@
     "test": "snyk test"
   },
   "dependencies": {
-    "adm-zip": "0.4.11",
+    "adm-zip": "0.5.2",
     "body-parser": "1.20.2",
     "cfenv": "^1.0.4",
     "consolidate": "0.14.5",
@@ -29,7 +29,7 @@
     "file-type": "^8.1.0",
     "humanize-ms": "1.0.1",
     "jquery": "^2.2.4",
-    "lodash": "4.17.4",
+    "lodash": "4.17.17",
     "marked": "0.3.5",
     "method-override": "latest",
     "moment": "2.15.1",
