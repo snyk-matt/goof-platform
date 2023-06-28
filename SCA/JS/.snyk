@@ -1,0 +1,141 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - karma > connect > finalhandler > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: karma > connect > finalhandler > debug
+    - tap > nyc > micromatch > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > micromatch > snapdragon > debug
+    - tap > nyc > micromatch > braces > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > micromatch > braces > snapdragon > debug
+    - tap > nyc > micromatch > extglob > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > micromatch > extglob > snapdragon > debug
+    - tap > nyc > micromatch > nanomatch > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > micromatch > nanomatch > snapdragon > debug
+    - tap > nyc > test-exclude > micromatch > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > test-exclude > micromatch > snapdragon > debug
+    - tap > nyc > micromatch > extglob > expand-brackets > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > micromatch > extglob > expand-brackets > debug
+    - tap > nyc > test-exclude > micromatch > braces > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > test-exclude > micromatch > braces > snapdragon > debug
+    - tap > nyc > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: >-
+          tap > nyc > micromatch > extglob > expand-brackets > snapdragon >
+          debug
+    - tap > nyc > test-exclude > micromatch > extglob > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > test-exclude > micromatch > extglob > snapdragon > debug
+    - tap > nyc > test-exclude > micromatch > nanomatch > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: tap > nyc > test-exclude > micromatch > nanomatch > snapdragon > debug
+    - karma > chokidar > readdirp > micromatch > extglob > expand-brackets > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: >-
+          karma > chokidar > readdirp > micromatch > extglob > expand-brackets >
+          debug
+    - tap > nyc > test-exclude > micromatch > extglob > expand-brackets > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: >-
+          tap > nyc > test-exclude > micromatch > extglob > expand-brackets >
+          debug
+    - tap > nyc > test-exclude > micromatch > extglob > expand-brackets > snapdragon > debug:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:debug:20170905'
+        path: >-
+          tap > nyc > test-exclude > micromatch > extglob > expand-brackets >
+          snapdragon > debug
+  'npm:ms:20170412':
+    - karma > connect > finalhandler > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: karma > connect > finalhandler > debug > ms
+    - tap > nyc > micromatch > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: tap > nyc > micromatch > snapdragon > debug > ms
+    - tap > nyc > micromatch > braces > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: tap > nyc > micromatch > braces > snapdragon > debug > ms
+    - tap > nyc > micromatch > extglob > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: tap > nyc > micromatch > extglob > snapdragon > debug > ms
+    - tap > nyc > micromatch > nanomatch > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: tap > nyc > micromatch > nanomatch > snapdragon > debug > ms
+    - tap > nyc > test-exclude > micromatch > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: tap > nyc > test-exclude > micromatch > snapdragon > debug > ms
+    - tap > nyc > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: tap > nyc > micromatch > extglob > expand-brackets > debug > ms
+    - tap > nyc > test-exclude > micromatch > braces > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          tap > nyc > test-exclude > micromatch > braces > snapdragon > debug >
+          ms
+    - tap > nyc > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          tap > nyc > micromatch > extglob > expand-brackets > snapdragon >
+          debug > ms
+    - tap > nyc > test-exclude > micromatch > extglob > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          tap > nyc > test-exclude > micromatch > extglob > snapdragon > debug >
+          ms
+    - tap > nyc > test-exclude > micromatch > nanomatch > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          tap > nyc > test-exclude > micromatch > nanomatch > snapdragon > debug
+          > ms
+    - karma > chokidar > readdirp > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          karma > chokidar > readdirp > micromatch > extglob > expand-brackets >
+          debug > ms
+    - tap > nyc > test-exclude > micromatch > extglob > expand-brackets > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          tap > nyc > test-exclude > micromatch > extglob > expand-brackets >
+          debug > ms
+    - tap > nyc > test-exclude > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        patched: '2023-06-28T22:16:09.722Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          tap > nyc > test-exclude > micromatch > extglob > expand-brackets >
+          snapdragon > debug > ms
