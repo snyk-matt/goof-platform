@@ -3,4 +3,4 @@
 exclude:
     global:
         # Exclude a single directory. For example, - src/lib
-        - source/Code/frontend
+        - Code/frontend
