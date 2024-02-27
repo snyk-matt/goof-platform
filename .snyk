@@ -4,3 +4,4 @@ exclude:
     global:
         # Exclude a single directory. For example, - src/lib
         - Code/frontend
+        - Code/python-goof
