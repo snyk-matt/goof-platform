@@ -20,7 +20,7 @@ pyasn1==0.2.3
 pyasn1-modules==0.0.9
 pyquery==1.2.17
 pytz==2017.2
-requests==2.20
+requests==2.32.0
 rsa==3.4.2
 six==1.10.0
 soco==0.12
