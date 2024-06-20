@@ -30,6 +30,7 @@
     "file-type": "^8.1.0",
     "humanize-ms": "1.0.1",
     "jquery": "^2.2.4",
+    "jsoneditor": "5.34.0",
     "karma": "1.7.1",
     "lodash": "4.17.4",
     "marked": "0.3.18",
