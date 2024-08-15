@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     build-sbom:
           steps:
-    	- name: Generate SBOM
-      	- uses: anchore/sbom-action@v0
+              	- name: Generate SBOM
+                	- uses: anchore/sbom-action@v0
           with:
        	  format: 'spdx-json'
        	  output-file: 'sbom.spdx.json'
