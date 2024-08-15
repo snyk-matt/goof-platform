@@ -3,16 +3,15 @@ name: "SBOM to CX"
 on: push
 
 jobs:
-	steps:
-	  - name: Generate SBOM
-        uses: anchore/sbom-action@v0
-        with:
-          format: 'spdx-json'
-          output-file: 'sbom.spdx.json'
           
   run-updater:
     runs-on: ubuntu-latest
     steps:
+    - name: Generate SBOM
+      uses: anchore/sbom-action@v0
+      with:
+         format: 'spdx-json'
+         output-file: 'sbom.spdx.json'
     - name: upload sbom results
       run: |
 curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @sbom.spdx.json -v 
