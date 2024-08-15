@@ -12,11 +12,11 @@ jobs:
         id: sbom
         env: 
           GITHUB_TOKEN: ${{ github.token }}
-      - uses: actions/upload-artifact@v3.1.0
+      - uses: actions/upload-artifact@v4
         with: 
           path : ${{steps.sbom.outputs.fileName }}
-          name : sbom.json
           compression-level: 0
+          name : sbom.json
       - run: | 
             more /home/runner/work/goof-platform/goof-platform/*.json
       - run: | 
