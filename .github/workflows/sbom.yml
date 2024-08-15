@@ -7,12 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: mkdir -p sbom
       - uses: actions/checkout@v3
-
       - uses: advanced-security/sbom-generator-action@v0.0.1
         id: sbom
         env: 
           GITHUB_TOKEN: ${{ github.token }}
       - uses: actions/upload-artifact@v3.1.0
         with: 
-          path : sbom.json
+          path : sbom
+          name : sbom.json
