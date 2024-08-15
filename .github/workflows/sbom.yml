@@ -7,6 +7,10 @@ jobs:
   run-updater:
     runs-on: ubuntu-latest
     steps:
+    - name: Publish SBOM
+      uses: anchore/sbom-action/publish-sbom@v0
+  	  with:
+    		sbom-artifact-match: ".*\\.spdx$"
     - name: Generate SBOM
       uses: anchore/sbom-action@v0
       with:
