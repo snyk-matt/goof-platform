@@ -8,7 +8,7 @@ jobs:
     steps:  
     - name: generate sbom results
       run: |
-            curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/vberegov/goof-platform/dependency-graph/sbom > sbom.sarif
+            curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/vberegov/goof-platform/dependency-graph/sbom > sbom.sarif
     - name: Upload file
       uses: actions/upload-artifact@v4
       with:
