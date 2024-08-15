@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions: read-all
     steps:
-      - run: mkdir -p sbom
       - uses: actions/checkout@v3
       - uses: advanced-security/sbom-generator-action@v0.0.1
         id: sbom
@@ -17,5 +16,5 @@ jobs:
         with: 
           path : ${{steps.sbom.outputs.fileName }}
           name : sbom.json
-          run: |
+      - run: |
             curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d /home/runner/work/goof-platform/goof-platform/*.json -v 
