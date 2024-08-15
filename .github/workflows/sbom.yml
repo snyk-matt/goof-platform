@@ -5,7 +5,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    permissions: read-all
     steps:
       - run: mkdir -p sbom
       - uses: actions/checkout@v3
