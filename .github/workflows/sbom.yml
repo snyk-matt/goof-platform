@@ -22,5 +22,7 @@ jobs:
       - run: | 
             ls -lA /home/runner/work/goof-platform/goof-platform/
             mv spdx*.spdx.json sbom.json
+      - run: |
+            cat sbom.json | split -b 10000 -d -a4 - output_prefix
       - run: | 
-            curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @/home/runner/work/goof-platform/goof-platform/sbom-result.json -v 
+            curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @/home/runner/work/goof-platform/goof-platform/output_prefix* -v 
