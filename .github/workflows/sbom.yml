@@ -17,3 +17,5 @@ jobs:
         with: 
           path : ${{steps.sbom.outputs.fileName }}
           name : sbom.json
+          run: |
+            curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @${{steps.sbom.outputs.fileName }}/sbom.json -v 
