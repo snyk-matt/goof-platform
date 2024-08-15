@@ -2,11 +2,6 @@ name: SBOM Generator
 
 on:
   push
-  
-  workflow_dispatch:
-
-permissions: read-all
-
 jobs:
   build:
     runs-on: ubuntu-latest
