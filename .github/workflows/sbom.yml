@@ -15,5 +15,5 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
       - uses: actions/upload-artifact@v3.1.0
         with: 
-          path : sbom
+          path : ${{steps.sbom.outputs.fileName }}
           name : sbom.json
