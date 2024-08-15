@@ -20,6 +20,6 @@ jobs:
       - run: | 
             more /home/runner/work/goof-platform/goof-platform/sbom.json
       - run: | 
-            gunzip sbom.json.gzip
+            unzip sbom.json.gzip
       - run: | 
             curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @/home/runner/work/goof-platform/goof-platform/sbom.json -v 
