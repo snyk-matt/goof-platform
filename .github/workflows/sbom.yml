@@ -10,9 +10,9 @@ jobs:
       run: |
             curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/vberegov/goof-platform/dependency-graph/sbom > sbom.sarif
     - name: Upload file
-      uses: github/codeql-action/upload-sarif@v2
+      uses: actions/upload-artifact@v4
       with:
-        sarif_file: sbom.sarif
+       name: sbom.sarif
     - name: upload sbom to CX
       run: |
             run: |
