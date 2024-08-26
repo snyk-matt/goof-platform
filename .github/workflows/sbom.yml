@@ -5,7 +5,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: read-all
     steps:
       - uses: actions/checkout@v3
       - uses: advanced-security/sbom-generator-action@v0.0.1
@@ -17,10 +16,14 @@ jobs:
           path : ${{steps.sbom.outputs.fileName }}
           compression-level: 0
           name : sbom
+      - run: | 
+            ls -lA
       - run: |
             curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer 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" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/vberegov/goof-platform/dependency-graph/sbom > sbom.json
       - run: | 
             unset env github
+      - run: | 
+            ls -lA
       - run: | 
             github=$(grep -m 1 "name" sbom.json)| jq '.sbom.packages[] | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID,'$github'}}' sbom.json > sbom_output.json
       - run : | 
