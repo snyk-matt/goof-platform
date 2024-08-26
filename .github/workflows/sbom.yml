@@ -26,10 +26,8 @@ jobs:
             mv spdx*.spdx.json sbom.json
       - run: | 
             ls -lA
-      - run : |
-            echo $github
       - run: | 
-            jq '.sbom.packages[]? | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID}}' sbom.json > sbom_output.json
+            jq '.sbom.packages[] | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID}}' sbom.json > sbom_output.json
       - run : | 
             echo $github
       - run : |
