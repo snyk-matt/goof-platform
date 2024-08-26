@@ -27,7 +27,7 @@ jobs:
       - run: | 
             ls -lA
       - run: | 
-            jq '.sbom.packages[] | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID}}' sbom.json > sbom_output.json
+            jq 'try .sbom.packages[]? | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID}}' sbom.json > sbom_output.json
       - run : | 
             echo $github
       - run : |
