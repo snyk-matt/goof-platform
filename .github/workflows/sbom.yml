@@ -18,14 +18,22 @@ jobs:
           compression-level: 0
           name : sbom
       - run: | 
-            more /home/runner/work/goof-platform/goof-platform/spdx*.spdx.json
+            unset env github
       - run: | 
-            ls -lA /home/runner/work/goof-platform/goof-platform/
+            github=$(grep -m 1 "name" sbom.json)| jq '.sbom.packages[] | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID,'$github'}}' sbom.json > sbom_output.json
       - run : | 
-            mv spdx*.spdx.json sbom.json
+            echo $github
       - run: |
-            cat *.json | split -b 10000 -d -a4 - output_prefix
+            mkdir sbom_chunks
       - run: | 
-            ls -lA /home/runner/work/goof-platform/goof-platform/
+            split -l 11 sbom_output.json sbom_chunks/sbom
       - run: | 
-            curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @/home/runner/work/goof-platform/goof-platform/output_prefix* -v 
+            ls sbom_chunks/ > files_list
+      - run: |
+            echo "split completed"
+      - run: | 
+            set input_file="files_list"
+      - run: | 
+            while IFS= read -r line || [ -n "$line" ]; do
+            curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @"sbom_chunks/""$line" -v
+            done < "$input_file"
