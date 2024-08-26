@@ -23,7 +23,7 @@ jobs:
       - run: | 
             unset env github
       - run: | 
-            ls -lA
+            mv spdx*.spdx.json sbom.json
       - run: | 
             github=$(grep -m 1 "name" sbom.json)| jq '.sbom.packages[] | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID,'$github'}}' sbom.json > sbom_output.json
       - run : | 
