@@ -5,6 +5,7 @@ input_file="files_list"
 
 #Run jq to generate structured informative sbom form original
 unset env github
+mv spdx.spdx.json sbom.json
 github=$(grep -m 1 "name" sbom.json)
 github=$(grep -m 1 "name" sbom.json)| jq '.sbom.packages[] | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID,'$github'}}' sbom.json > sbom_output.json
 echo $github
