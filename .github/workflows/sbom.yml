@@ -16,6 +16,17 @@ jobs:
           path : ${{steps.sbom.outputs.fileName }}
           compression-level: 0
           name : sbom
+      - name: 'Setup jq'
+        uses: dcarbone/install-jq-action@v2
+        with:
+          version: '${{ inputs.version }}'
+          force: '${{ inputs.force }}'
+
+      - name: 'Check jq'
+        # language=sh
+        run: |
+          which jq
+          jq --version
       - run: | 
           chmod +x split.sh
           ./split.sh
