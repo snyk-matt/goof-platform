@@ -7,8 +7,10 @@ input_file="files_list"
 unset env github
 ls -lA
 mv spdx*.spdx.json sbom.json
+ls -lA
 github=$(grep -m 1 "name" sbom.json)
-github=$(grep -m 1 "name" sbom.json)| jq '.sbom.packages[]? | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID,'$github'}}' sbom.json > sbom_output.json
+@echo github
+jq '.sbom.packages[]? | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,copyrightText:.copyrightText,SPDXID:.SPDXID'}}' sbom.json > sbom_output.json
 
 #Split the big file to small json files to represent each as separate log line (10 lines each)
 mkdir sbom_chunks
