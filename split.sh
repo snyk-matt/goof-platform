@@ -13,3 +13,5 @@ split -l 11 sbom_output.json sbom_chunks/sbom
 echo "split done should see files"
 ls sbom_chunks/ > files_list
 echo "split completed"
+ls -lA 
+cat files_list
