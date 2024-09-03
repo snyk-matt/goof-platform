@@ -27,6 +27,8 @@ jobs:
         run: |
           which jq
           jq --version
+          sudo apt-get install jq --force
+          jq --version
       - run: | 
           chmod +x split.sh
           ./split.sh
