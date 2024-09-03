@@ -8,3 +8,7 @@ jq '.packages[]? | {"sbom":{packagename:.name,versionInfo:.versionInfo,licenseDe
 ls -lA
 cat -n 20 sbom_output.json
 ls -lA
+mkdir sbom_chunks
+split -l 11 sbom_output.json sbom_chunks/sbom
+ls sbom_chunks/ > files_list
+echo "split completed"
