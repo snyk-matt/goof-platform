@@ -28,5 +28,7 @@ jobs:
           which jq
           jq --version
       - run: | 
-          chmod +x split.sh
-          ./split.sh
+          mv spdx*.spdx.json sbom_temp.json
+          cat sbom.json| jq -r '.packages[]?' | while read -r repo; do echo "$repo"; done | jq -r tostring |  jq -s '.' > sbom_output.json
+          curl -X POST 'https://ingress.coralogix.com/webhooks/v1/_hLsZCzkHFHkxB8sIXKbN?cx-api-key=cxtp_O8rQunc7vOLXpjVFaIRP6ifPA83VD1&cx-application-name=github&cx-subsystem-name=sbom' -H 'Content-Type: application/json' -d @sbom_output.json -v
+
