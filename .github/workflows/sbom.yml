@@ -27,6 +27,8 @@ jobs:
         run: |
           which jq
           jq --version
+          sudo apt-get update jq -y
+          jq --version
       - run: | 
           mv spdx*.spdx.json sbom.json
           cat sbom.json| jq -r '.packages[]? | {"sbom":{copyrightText:.copyrightText,packagename:.name,versionInfo:.versionInfo,licenseDeclared:.licenseDeclared,downloadLocation:.downloadLocation,licenseConcluded:.licenseConcluded,SPDXID:.SPDXID,referenceLocator:.externalRefs[].referenceLocator,referenceCategory:.externalRefs[].referenceCategory,referenceType:.externalRefs[].referenceType}}' | while read -r repo; do echo "$repo"; done | jq -r tostring |  jq -s '.' > sbom_output.json
