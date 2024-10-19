@@ -48,7 +48,7 @@
     "tinymce": "4.1.0",
     "total.js": "3.4.8",
     "total4": "0.0.42",
-    "typeorm": "^0.2.24"
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
